@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="tr" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MeftunTech Links</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap"
+    />
+    <style>
+      * {
+        font-family: "Fira Sans", sans-serif;
+      }
+      body {
+        background-color: #102030;
+        font-weight: bold;
+      }
+      .animated-btn {
+        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        border-width: 2px;
+        font-weight: 600;
+        text-decoration: none;
+        transform: translateZ(0);
+      }
+      .animated-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      }
+      header {
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--secondary-color)
+        );
+        padding: 1rem .5rem;
+        text-align: center;
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+      }
+      .logo-container {
+        margin-bottom: 2rem;
+      }
+      .logo {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        box-shadow: 0 10px 25px var(--shadow-color);
+        transition: transform 0.3s ease;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="particles" id="particles"></div>
+      <div class="header-content">
+        <div class="logo-container">
+          <img src="./MeftunTech.png" alt="MeftunTech" class="logo" />
+        </div>
+        <h1>MeftunTech</h1>
+        <p>Innovating the Future with Cutting-edge Software Solutions</p>
+      </div>
+    </header>
+    <div class="container-fluid pt-3">
+      <div id="list"></div>
+    </div>
+    <script>
+      const links = [
+        {
+          name: "Altın Döviz Borsa Fiyatları Pro (Reklamsız)",
+          url: "https://meftuntech.github.io/app.html?id=com.meftuntech.adbfpro",
+        },
+        {
+          name: "Altın Döviz Borsa Fiyatları",
+          url: "https://meftuntech.github.io/app.html?id=com.necdetuygur.adbf",
+        },
+        {
+          name: "İzmir Eshot Durağa Yaklaşan Otobüsler",
+          url: "https://meftuntech.github.io/app.html?id=com.meftuntech.edyo",
+        },
+        {
+          name: "Hesabım: İnternetsiz Muhasebe Takibi",
+          url: "https://meftuntech.github.io/app.html?id=com.meftuntech.hesabim",
+        },
+        {
+          name: "İnternetsiz İftara Ne Kadar Kaldı",
+          url: "https://meftuntech.github.io/app.html?id=com.meftuntech.iftar",
+        },
+        {
+          name: "İnternetsiz Namaz Vakti",
+          url: "https://meftuntech.github.io/app.html?id=com.meftuntech.namazvakti",
+        },
+        {
+          name: "Kaza Namazları Takip",
+          url: "https://meftuntech.github.io/app.html?id=com.meftuntech.kazanamazlari",
+        },
+        {
+          name: "Kısa Sureler ve Namaz Duaları",
+          url: "https://meftuntech.github.io/app.html?id=com.meftuntech.ksnd",
+        },
+        {
+          name: "İnternetsiz İngilizce Öğren",
+          url: "https://meftuntech.github.io/app.html?id=com.meftuntech.ingilizceogren",
+        },
+        {
+          name: "Sayaç: Tesbih Zikirmatik",
+          url: "https://meftuntech.github.io/app.html?id=com.meftuntech.counter",
+        },
+      ];
+      const list = document.querySelector("#list");
+      const colors = [
+        "primary",
+        "success",
+        "danger",
+        "warning",
+        "info",
+        "light",
+      ];
+      let buttonsCreated = false;
+      function createButtons() {
+        list.innerHTML = "";
+        links.forEach((item, index) => {
+          list.innerHTML += `
+            <a
+                href="${item.url}"
+                target="_blank"
+                class="btn btn-lg btn-outline-primary mb-3 w-100 animated-btn"
+                id="btn-${index}"
+            >
+                ${item.name}
+            </a>
+          `;
+        });
+        buttonsCreated = true;
+      }
+      function updateButtonColors() {
+        if (!buttonsCreated) return;
+        links.forEach((item, index) => {
+          const button = document.getElementById(`btn-${index}`);
+          if (button) {
+            colors.forEach((color) => {
+              button.classList.remove(`btn-outline-${color}`);
+            });
+            const randomColor =
+              colors[Math.floor(Math.random() * colors.length)];
+            button.classList.add(`btn-outline-${randomColor}`);
+          }
+        });
+      }
+      createButtons();
+      setInterval(updateButtonColors, 1000);
+    </script>
+  </body>
+</html>
