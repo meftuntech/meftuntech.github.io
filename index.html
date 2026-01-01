@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MeftunTech - Innovating the Future</title>
+    <meta http-equiv="refresh" content="0; url=./apps.html" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap"
+    />
+    <style>
+      :root {
+        --primary-color: #3498db;
+        --secondary-color: #2c3e50;
+        --accent-color: #1abc9c;
+        --text-color: #333;
+        --bg-color: #fff;
+        --card-bg: #f9f9f9;
+        --shadow-color: rgba(0, 0, 0, 0.1);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --primary-color: #3498db;
+          --secondary-color: #34495e;
+          --accent-color: #2ecc71;
+          --text-color: #f0f0f0;
+          --bg-color: #121212;
+          --card-bg: #1e1e1e;
+          --shadow-color: rgba(255, 255, 255, 0.05);
+        }
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Fira Sans", sans-serif;
+      }
+
+      body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        transition: all 0.3s ease;
+        line-height: 1.6;
+      }
+
+      header {
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--secondary-color)
+        );
+        padding: 3rem 1.5rem;
+        text-align: center;
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .header-content {
+        position: relative;
+        z-index: 2;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .header-content h1 {
+        font-size: 2.8rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+      }
+
+      .header-content p {
+        font-size: 1.3rem;
+        font-weight: 400;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .logo-container {
+        margin-bottom: 2rem;
+      }
+
+      .logo {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        box-shadow: 0 10px 25px var(--shadow-color);
+        transition: transform 0.3s ease;
+      }
+
+      .logo:hover {
+        transform: scale(1.05);
+      }
+
+      .particles {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+
+      .particle {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        animation: float 15s infinite linear;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0) rotate(0deg);
+          opacity: 0;
+        }
+        10% {
+          opacity: 0.2;
+        }
+        90% {
+          opacity: 0.2;
+        }
+        100% {
+          transform: translateY(-500px) rotate(360deg);
+          opacity: 0;
+        }
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+      }
+
+      .section {
+        margin-bottom: 4rem;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeIn 0.8s forwards;
+        padding: 0 1rem;
+      }
+
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .section:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+      .section:nth-child(2) {
+        animation-delay: 0.3s;
+      }
+      .section:nth-child(3) {
+        animation-delay: 0.5s;
+      }
+
+      .section-title {
+        font-size: 2rem;
+        margin-bottom: 1.8rem;
+        color: var(--primary-color);
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+      }
+
+      .section-title i {
+        margin-right: 0.8rem;
+      }
+
+      .section p {
+        margin-bottom: 2rem;
+        font-size: 1.1rem;
+        max-width: 900px;
+      }
+
+      .services {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2.5rem;
+      }
+
+      .service-card {
+        background-color: var(--card-bg);
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: 0 5px 15px var(--shadow-color);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px var(--shadow-color);
+      }
+
+      .service-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 5px;
+        height: 100%;
+        background: linear-gradient(
+          to bottom,
+          var(--primary-color),
+          var(--secondary-color)
+        );
+      }
+
+      .service-icon {
+        font-size: 2.2rem;
+        margin-bottom: 1.2rem;
+        color: var(--primary-color);
+      }
+
+      .service-title {
+        font-size: 1.3rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+
+      .service-card p {
+        margin-bottom: 0;
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+
+      .cta-container {
+        text-align: center;
+        margin: 4rem 0;
+        padding: 3rem 2rem;
+        background-color: var(--card-bg);
+        border-radius: 12px;
+        box-shadow: 0 5px 15px var(--shadow-color);
+      }
+
+      .cta-container h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        color: var(--primary-color);
+        font-weight: 700;
+      }
+
+      .cta-button {
+        margin: 1rem;
+        display: inline-block;
+        padding: 1rem 2.5rem;
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--secondary-color)
+        );
+        color: #fff;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 1.1rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      }
+
+      .cta-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      footer {
+        background-color: var(--card-bg);
+        padding: 3rem 2rem;
+        text-align: center;
+        border-top: 1px solid rgba(128, 128, 128, 0.2);
+        font-size: 1.1rem;
+      }
+
+      footer a {
+        color: var(--primary-color);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      footer a:hover {
+        color: var(--accent-color);
+      }
+
+      .pulse {
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .container {
+          padding: 2rem 1.5rem;
+        }
+
+        .services {
+          grid-template-columns: 1fr;
+        }
+
+        .section-title {
+          font-size: 1.8rem;
+        }
+
+        .header-content h1 {
+          font-size: 2.2rem;
+        }
+
+        .header-content p {
+          font-size: 1.1rem;
+        }
+
+        .logo {
+          width: 120px;
+          height: 120px;
+        }
+
+        .service-card {
+          padding: 1.8rem;
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        .header-content h1 {
+          font-size: 1.8rem;
+        }
+
+        .header-content p {
+          font-size: 1rem;
+        }
+
+        .section-title {
+          font-size: 1.6rem;
+        }
+
+        .service-card {
+          padding: 1.5rem;
+        }
+
+        .logo {
+          width: 100px;
+          height: 100px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="particles" id="particles"></div>
+      <div class="header-content">
+        <div class="logo-container">
+          <img src="./MeftunTech.png" alt="MeftunTech" class="logo" />
+        </div>
+        <h1>MeftunTech</h1>
+        <p>Innovating the Future with Cutting-edge Software Solutions</p>
+      </div>
+    </header>
+
+    <div class="container">
+      <section class="section">
+        <h2 class="section-title">Welcome to MeftunTech</h2>
+        <p>
+          At MeftunTech, we specialize in delivering innovative software
+          solutions tailored to meet your unique business needs. From custom
+          software development to enterprise-level solutions, we empower your
+          business to thrive in a digital-first world.
+        </p>
+
+        <div class="services">
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+            <h3 class="service-title">Custom Software Development</h3>
+            <p>
+              We create tailor-made software solutions designed specifically for
+              your business requirements, ensuring optimal performance and user
+              experience.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+            <h3 class="service-title">Mobile App Development</h3>
+            <p>
+              Our expert team develops high-performance, user-friendly mobile
+              applications for iOS and Android platforms that engage your
+              customers.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-globe"></i></div>
+            <h3 class="service-title">Web Development</h3>
+            <p>
+              We build responsive, modern web applications and websites that
+              showcase your brand and deliver seamless user experiences.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="cta-container">
+        <a
+          target="_blank"
+          href="https://play.google.com/store/apps/dev?id=9130623771728640226"
+          class="cta-button pulse"
+        >
+          Google Play Store
+        </a>
+
+        <a
+          target="_blank"
+          href="./altin-doviz-borsa-fiyatlari.html"
+          class="cta-button pulse"
+        >
+          Altın Döviz Borsa Fiyatları
+        </a>
+
+        <a
+          target="_blank"
+          href="./internetsiz-namaz-vakti.html"
+          class="cta-button pulse"
+        >
+          İnternetsiz Namaz Vakti
+        </a>
+      </div>
+    </div>
+
+    <footer>
+      <p>
+        © 2026 MeftunTech. All rights reserved. <br />
+        <a target="_blank" href="./altin-doviz-borsa-fiyatlari.html">
+          Altın Döviz Borsa Fiyatları
+        </a>
+        |
+        <a target="_blank" href="./internetsiz-namaz-vakti.html">
+          İnternetsiz Namaz Vakti
+        </a>
+        |
+        <a target="_blank" href="./privacy_policy_en.html"> Privacy Policy </a>
+      </p>
+    </footer>
+
+    <script>
+      // Particles animation
+      document.addEventListener("DOMContentLoaded", function () {
+        const particles = document.getElementById("particles");
+        for (let i = 0; i < 20; i++) {
+          const particle = document.createElement("div");
+          particle.className = "particle";
+          particle.style.left = `${Math.random() * 100}%`;
+          particle.style.top = `${Math.random() * 100}%`;
+          particle.style.animationDuration = `${15 + Math.random() * 10}s`;
+          particle.style.animationDelay = `${Math.random() * 5}s`;
+          particles.appendChild(particle);
+        }
+
+        // Stagger section animations
+        const sections = document.querySelectorAll(".section");
+        sections.forEach((section, index) => {
+          section.style.animationDelay = `${0.1 + index * 0.2}s`;
+        });
+      });
+
+      // Check for system theme and apply
+      function applyTheme() {
+        const isDarkMode =
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.body.classList.toggle("dark-theme", isDarkMode);
+      }
+
+      // Apply theme on load
+      applyTheme();
+
+      // Listen for theme changes
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", applyTheme);
+    </script>
+  </body>
+</html>
