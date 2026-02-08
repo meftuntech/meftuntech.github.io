@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="tr" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MeftunTech Links</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap"
+    />
+    <style>
+      * {
+        font-family: "Fira Sans", sans-serif;
+      }
+      body {
+        background-color: #102030;
+        font-weight: bold;
+      }
+      .animated-btn {
+        transition: all 1s cubic-bezier(0.2, 0, 0.1, 1);
+        border-width: 2px;
+        font-weight: 600;
+        text-decoration: none;
+        transform: translateZ(0);
+      }
+      .animated-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid pt-3">
+      <div id="list"></div>
+    </div>
+    <script>
+      const links = [
+        {
+          url: "https://meftuntech.github.io/app.html?id=com.meftuntech.adbfpro",
+          icon: "https://play-lh.googleusercontent.com/1NFa4xmzmIxisdLEJvJVQ5kZUHed2naRhymNbwRtBiZFMMSdZ6NDRhrElIRG0jBPUJscgZHhH3_sN7uLpK9Z6g=s256-rw",
+          name: "Altın Döviz Borsa Pro (Reklamsız)",
+        },
+        {
+          url: "https://meftuntech.github.io/app.html?id=com.necdetuygur.adbf",
+          icon: "https://play-lh.googleusercontent.com/jDfWnTgw8ovkqqALnr8kFnS4PM_DFzrbLxxC4EqO04GgeSWIqQFbcP76D295hIgIpkg_=s256-rw",
+          name: "Altın Döviz Borsa Fiyatları",
+        },
+        {
+          url: "https://meftuntech.github.io/app.html?id=com.meftuntech.ksnd",
+          icon: "https://play-lh.googleusercontent.com/SBlqbIj_bEeSbnnlCf6TDxbiRMi1Oe5hx1ELyZla8HDDE3wKzEzE-0nTXWTk95WiT5M=s256-rw",
+          name: "Kısa Sureler ve Namaz Duaları",
+        },
+        {
+          url: "https://meftuntech.github.io/app.html?id=com.meftuntech.hesabim",
+          icon: "https://play-lh.googleusercontent.com/CEVpXdQazR1Thh0CgX6QPwqVv-NGVC0aR6A9WRUuT8NbZEz4563ZPZzc1hNbq8lACpY=s256-rw",
+          name: "İnternetsiz Muhasebe Takibi",
+        },
+        {
+          url: "https://meftuntech.github.io/app.html?id=com.meftuntech.kronometre",
+          icon: "https://play-lh.googleusercontent.com/h0xqdcEqlNMaQ3xrvEd4rmLrvwVQHYGRYo3JEN-EH1YG80NSh5K0L8wGQXvdEylQMg-v=s256-rw",
+          name: "Kronometre: Süre Sayacı",
+        },
+        {
+          url: "https://meftuntech.github.io/app.html?id=com.meftuntech.namazvakti",
+          icon: "https://play-lh.googleusercontent.com/Y4K9n_LM749tn4sDOS4J0yiVfcrLhxfJu5J3UtMSc8Jk543zxkxzNMDkV4tw6E6s304=s256-rw",
+          name: "İnternetsiz Namaz Vakti",
+        },
+        {
+          url: "https://meftuntech.github.io/app.html?id=com.meftuntech.kazanamazlari",
+          icon: "https://play-lh.googleusercontent.com/o2nAoRYLGOs8oBw0gBCkXvvBeYoVxUlFr85MTq1IlzdYOl8Fhgdt6nlo6SoLUuClzQ=s256-rw",
+          name: "Kaza Namazları Takip",
+        },
+        {
+          url: "https://meftuntech.github.io/app.html?id=com.necdetuygur.borsa",
+          icon: "https://play-lh.googleusercontent.com/gAT6QOq2QaK3kq69Yp9PDr_0wofha-igcHT6qwgvdyFBKdZ0aBiZAVD93-S7PaFItp6g=s256-rw",
+          name: "Borsa",
+        },
+        {
+          url: "https://meftuntech.github.io/app.html?id=com.meftuntech.carpimtablosumacreasi",
+          icon: "https://play-lh.googleusercontent.com/79t3N5k2wLqGp3_Bv7PjAFHCWptZ6ZapcwzDNwCJcDq8ROh8UuJEs3pNFnK87QIEyo5YpKRgkCxpOBHNATylyA=s256-rw",
+          name: "Çarpım Tablosu Macerası",
+        },
+        {
+          url: "https://meftuntech.github.io/app.html?id=com.meftuntech.derscantasikontrolcusu",
+          icon: "https://play-lh.googleusercontent.com/wFjo3-4-fkd_CzGm0k95Kumy_5u--GbE4XSfA6Ez_re77YE-_YQhW1p_3j50ZGbKnLXIRs3wj5XipU_tdfNJ2_M=s256-rw",
+          name: "Ders Çantası Kontrolcüsü",
+        },
+        {
+          url: "https://meftuntech.github.io/app.html?id=com.meftuntech.pomodoro",
+          icon: "https://play-lh.googleusercontent.com/_XAYWiQZkzeFZOeSuNzENLwtYRFWjW4GyPpeRpJLgNDzhRuFx550DwIJc2dIQLEG8VeWmDsyX9p3bNaOmKoOcA=s256-rw",
+          name: "Pomodoro",
+        },
+        {
+          url: "https://meftuntech.github.io/app.html?id=com.meftuntech.suicmehatirlaticisi",
+          icon: "https://play-lh.googleusercontent.com/V0Z3TiWOzknQuGkOvGP3dXlGAwDZpO1TRbrnJJY7MM5hUPvAHLZu8QtP6880Kb_KpFdY=s256-rw",
+          name: "Su İçme Hatırlatıcısı",
+        },
+        {
+          url: "https://meftuntech.github.io/app.html?id=com.meftuntech.lpgpetrol",
+          icon: "https://play-lh.googleusercontent.com/oJ6EbvJHqEJ6-3mrhgbSZOOBy3ZrIrJYFY0bGkLPzho3w8G12ZCjK8Y8z55xai-dO4o=s256-rw",
+          name: "LPG Petrol Fiyatları",
+        },
+        {
+          url: "https://meftuntech.github.io/app.html?id=com.meftuntech.connectfour",
+          icon: "https://play-lh.googleusercontent.com/gEtSF4MsbO_73hUUKwTsOwtWM9eRhPGEgkEWwIDaYeIk38nJMLOxRpzC34eoxjcdsqw=s256-rw",
+          name: "Connect Four",
+        },
+        {
+          url: "https://meftuntech.github.io/app.html?id=com.meftuntech.arabayarisi",
+          icon: "https://play-lh.googleusercontent.com/LbN7RvfjRLtpYqUlf2M7ZAzOiZi04I_PO5su2IhqmtTILnKU_1V5_YAnwjuBIbiHjBU=s256-rw",
+          name: "Basit Araba Yarışı",
+        },
+        {
+          url: "https://meftuntech.github.io/app.html?id=com.meftuntech.hafizaoyunu",
+          icon: "https://play-lh.googleusercontent.com/-J2ROjhCpSN_5IGDlzGz1fNZl-nGn-liGedw4ZVcyH2kOfTO95jZZgaZLkDuO5BJB0E=s256-rw",
+          name: "Hafıza Oyunu: Eşini Bul",
+        },
+        {
+          url: "https://meftuntech.github.io/app.html?id=com.meftuntech.filmoneri",
+          icon: "https://play-lh.googleusercontent.com/oQEunnz1KDwoBoeWhzfS5Y0e4AbnVoJ968zFMpgYXdCRDPvVzf3_XhNdKyjKo1AOjmY=s256-rw",
+          name: "Film Öneri",
+        },
+        {
+          url: "https://meftuntech.github.io/app.html?id=com.meftuntech.halkaarz",
+          icon: "https://play-lh.googleusercontent.com/5f-fILhXr5TsTyFj86RAlUEJMEWsjdsGDhVE__hDmJswE9cxRBkp9qcL1U0_tHobxSo=s256-rw",
+          name: "Halka Arz",
+        },
+        {
+          url: "https://meftuntech.github.io/app.html?id=com.meftuntech.dogasesleri",
+          icon: "https://play-lh.googleusercontent.com/8m_SGLghXqCk-08ogm9H8I3-1RoViphufH1B2JGl4OmCL7l7_KuB8VWV2cIU8Iz_IA=s256-rw",
+          name: "Doğa Sesleri: Yağmur Sesleri",
+        },
+        {
+          url: "https://meftuntech.github.io/app.html?id=com.meftuntech.iftar",
+          icon: "https://play-lh.googleusercontent.com/Iq9nLvwsCKMSd8qkXR3nsYJChDklGLZDMDYxLoENjSPe62vSCmpgjJa0jSkmKigU3ciO=s256-rw",
+          name: "İnternetsiz İftara Ne Kadar K.",
+        },
+        {
+          url: "https://meftuntech.github.io/app.html?id=com.meftuntech.countdown",
+          icon: "https://play-lh.googleusercontent.com/FP4LngUkL_ZYRmgZVV1mwKqwabPZPbm3btioUvQ01RYgEGnpIzNU9EopRECNu_TIs8Y=s256-rw",
+          name: "Geri Sayım: Süre Sayacı",
+        },
+        {
+          url: "https://meftuntech.github.io/app.html?id=com.meftuntech.istihare",
+          icon: "https://play-lh.googleusercontent.com/PJshN3Q1vTsu-V7_haGiSusOhi8vfYuIEWN_HjnyaiWBAqW7OG2f2lDw_uEDE69P2A=s256-rw",
+          name: "İnternetsiz İstihare Takip",
+        },
+        {
+          url: "https://meftuntech.github.io/app.html?id=com.meftuntech.hisseoyunu",
+          icon: "https://play-lh.googleusercontent.com/gGYzgLGnTq3Z1gMaXlEkHRJCX4zYPNPMrMBkBUpiXnMTV4zCRVNoIuv6ZVRdn8TpDgit=s256-rw",
+          name: "Hisse Oyunu: Borsa Simülasyonu",
+        },
+        {
+          url: "https://meftuntech.github.io/app.html?id=com.meftuntech.tesbih",
+          icon: "https://play-lh.googleusercontent.com/4N6ysjfaXuEjBRZNaWjehy8DbvVn6StTqg-RBC9E06b-i8Wulns35TAnu55SSxLwrA=s256-rw",
+          name: "Tesbih",
+        },
+        {
+          url: "https://meftuntech.github.io/app.html?id=com.meftuntech.islem",
+          icon: "https://play-lh.googleusercontent.com/mTA8vqNY4A2Ej327ZVMzujo7zj_g0fbg2wIPtHJGj1l3-Lgxu6H5zsL9gpYHNQ34RyA=s256-rw",
+          name: "İşlem Yap",
+        },
+        {
+          url: "https://meftuntech.github.io/app.html?id=com.meftuntech.deprem",
+          icon: "https://play-lh.googleusercontent.com/wGPxNeeUqYsa4ZSTaRbQu7w-1WrbGhQO6gGIn9xpLKAEyttvbft8N3vluwcwwgfRLGeE=s256-rw",
+          name: "Son Depremler",
+        },
+        {
+          url: "https://meftuntech.github.io/app.html?id=com.meftuntech.cryptoprice",
+          icon: "https://play-lh.googleusercontent.com/__xjhMWQJG8PrErmBpI40oISAdO5wc7F-J0PxiInBC32UDxvK_YPFQUufJut8KMF9Q=s256-rw",
+          name: "CryptoPrice",
+        },
+        {
+          url: "https://meftuntech.github.io/app.html?id=com.meftuntech.ingilizceogren",
+          icon: "https://play-lh.googleusercontent.com/gs3KmiAsLMSlphDUNuGS1kgex5G1pshhRKhzk56YuqllVHtUgzs6sMKJYZZ12fqOGQQ=s256-rw",
+          name: "İnternetsiz İngilizce Öğren",
+        },
+        {
+          url: "https://meftuntech.github.io/app.html?id=com.meftuntech.odevdefteri",
+          icon: "https://play-lh.googleusercontent.com/LziOFcxLwxDTumYfFQSpSYT5bVAIo1AorM5l7VD8ab60RblM8DJa8nr4hNZHSbmJM-2N=s256-rw",
+          name: "Ödev Defteri",
+        },
+        {
+          url: "https://meftuntech.github.io/app.html?id=com.meftuntech.tkm",
+          icon: "https://play-lh.googleusercontent.com/n8y-PEvdotkrUbeAYuipXF3hFQTj_XiAUE358cb0jvCOeWA3IVd7zEQexo8eRCNGWGfO=s256-rw",
+          name: "Taş Kağıt Makas",
+        },
+        {
+          url: "https://meftuntech.github.io/app.html?id=com.meftuntech.duduk",
+          icon: "https://play-lh.googleusercontent.com/w8z-TnhntRu5zR5_f-NSxkAUlw30DwyD8OFtrQXDWFl4ElmYzsXNDk458BlawFvrEKmu=s256-rw",
+          name: "Düdük: Deprem Düdüğü",
+        },
+        {
+          url: "https://meftuntech.github.io/app.html?id=com.meftuntech.counter",
+          icon: "https://play-lh.googleusercontent.com/UAvyuQArF7T5Qx_O8gpiSt5EkwoVdf8Cwj6dyskTIWy0ABOU5uL4fFBg_QH-XmEQdhbE=s256-rw",
+          name: "Sayaç: Tesbih Zikirmatik",
+        },
+        {
+          url: "https://meftuntech.github.io/app.html?id=com.meftuntech.servismusteritakip",
+          icon: "https://play-lh.googleusercontent.com/IiF6tAO732WsQKEqvkNiats2gmIBCSyn7FImyv7RbZ0PkFrWIRXinDwxzAeX1Uzfcg=s256-rw",
+          name: "Servis Müşteri Takip",
+        },
+        {
+          url: "https://meftuntech.github.io/app.html?id=com.meftuntech.edyo",
+          icon: "https://play-lh.googleusercontent.com/xMNZk-XEYUrCLNKGMB_e4g-YnrMNA-xL4vsL7I934i_CTyZty_5XBndRYvjH9XSMw98h=s256-rw",
+          name: "Durağa Yaklaşan Otobüsler",
+        },
+        {
+          url: "https://meftuntech.github.io/app.html?id=com.meftuntech.kh",
+          icon: "https://play-lh.googleusercontent.com/rdwzMwK0dAhkYxh4GxSTL7FWGBbw15_nINSXl57uygMDqnt9YYuRtNT31eP1oetyLw0=s256-rw",
+          name: "Kâr Hesaplayıcı",
+        },
+        {
+          url: "https://meftuntech.github.io/app.html?id=com.necdetuygur.notdefteri",
+          icon: "https://play-lh.googleusercontent.com/4mZ2vADzv8ZqpbD0kv1xonRpH4rDgxQe8fGA-XwX7NR95Py-cSnlsp-sTzp8mDhcWptA=s256-rw",
+          name: "Not Defteri",
+        },
+        {
+          url: "https://meftuntech.github.io/app.html?id=com.necdetuygur.sayitahmin",
+          icon: "https://play-lh.googleusercontent.com/mHRwz07Ktl7nfVyhqR7BLHflG36-guOdEX-gG7WRFjZwBmGXOrtNoVQX0KR4HHCyLJc=s256-rw",
+          name: "Sayı Tahmin Oyunu",
+        },
+      ];
+      const list = document.querySelector("#list");
+      const colors = [
+        "primary",
+        "success",
+        "danger",
+        "warning",
+        "info",
+        "light",
+      ];
+      let buttonsCreated = false;
+      function createButtons() {
+        list.innerHTML = "";
+        links.forEach((item, index) => {
+          list.innerHTML += `
+            <a
+              href="${item.url}"
+              target="_blank"
+              class="btn btn-lg btn-outline-primary mb-3 w-100 animated-btn d-flex justify-content-between align-items-center"
+              id="btn-${index}"
+            >
+              <img
+                width="50"
+                style="border-radius: 50%;"
+                src="${item.icon}" 
+                alt=""
+              />
+              <span>${item.name}</span>
+            </a>
+          `;
+        });
+        buttonsCreated = true;
+      }
+      function updateButtonColors() {
+        if (!buttonsCreated) return;
+        links.forEach((item, index) => {
+          const button = document.getElementById(`btn-${index}`);
+          if (button) {
+            colors.forEach((color) => {
+              button.classList.remove(`btn-outline-${color}`);
+            });
+            const randomColor =
+              colors[Math.floor(Math.random() * colors.length)];
+            button.classList.add(`btn-outline-${randomColor}`);
+          }
+        });
+      }
+      createButtons();
+      setInterval(updateButtonColors, 1500);
+    </script>
+  </body>
+</html>

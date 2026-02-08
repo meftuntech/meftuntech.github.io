@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>İnternetsiz Namaz Vakti</title>
+    <style>
+      :root {
+        --primary-color: #4caf50;
+        --secondary-color: #2e7d32;
+        --text-color: #333;
+        --bg-color: #f9f9f9;
+        --card-bg: #fff;
+        --shadow-color: rgba(0, 0, 0, 0.1);
+        --border-color: #eaeaea;
+        --highlight: #8bc34a;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --primary-color: #4caf50;
+          --secondary-color: #81c784;
+          --text-color: #f5f5f5;
+          --bg-color: #121212;
+          --card-bg: #1e1e1e;
+          --shadow-color: rgba(0, 0, 0, 0.3);
+          --border-color: #333;
+          --highlight: #8bc34a;
+        }
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        transition: all 0.3s ease;
+      }
+
+      header {
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--secondary-color)
+        );
+        color: white;
+        text-align: center;
+        padding: 2rem 1rem;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .wave {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 350 50" xmlns="http://www.w3.org/2000/svg"><path d="M0,50 L0,20 C116.666667,-6.66666667 183.333333,-6.66666667 200,20 C216.666667,46.6666667 283.333333,46.6666667 350,20 L350,50 L0,50 Z" fill="rgba(255,255,255,0.3)"/></svg>');
+        background-size: 350px 50px;
+        animation: wave 8s linear infinite;
+      }
+
+      @keyframes wave {
+        0% {
+          background-position-x: 0;
+        }
+        100% {
+          background-position-x: 350px;
+        }
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 1rem;
+      }
+
+      .logo-container {
+        margin-bottom: 2rem;
+      }
+
+      .logo {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        box-shadow: 0 10px 25px var(--shadow-color);
+        transition: transform 0.3s ease;
+      }
+
+      .logo:hover {
+        transform: scale(1.05);
+      }
+
+      .app-title {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        animation: fadeIn 1s ease-in-out;
+      }
+
+      .app-subtitle {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+        animation: fadeIn 1.5s ease-in-out;
+      }
+
+      .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin: 3rem 0;
+      }
+
+      .feature-card {
+        background-color: var(--card-bg);
+        border-radius: 10px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 8px var(--shadow-color);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        animation: slideUp 0.5s ease-out;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px var(--shadow-color);
+      }
+
+      .feature-icon {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+      }
+
+      .feature-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+        color: var(--primary-color);
+      }
+
+      .feature-desc {
+        line-height: 1.6;
+      }
+
+      .prayer-times {
+        background-color: var(--card-bg);
+        border-radius: 10px;
+        padding: 2rem;
+        box-shadow: 0 4px 8px var(--shadow-color);
+        margin: 3rem 0;
+        animation: fadeIn 2s ease-in-out;
+      }
+
+      .prayer-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .prayer-title {
+        font-size: 1.8rem;
+        color: var(--primary-color);
+      }
+
+      .location {
+        font-size: 1.2rem;
+        padding: 0.5rem 1rem;
+        background-color: var(--highlight);
+        color: white;
+        border-radius: 20px;
+      }
+
+      .countdown {
+        text-align: center;
+        margin: 2rem 0;
+        font-size: 1.2rem;
+      }
+
+      .countdown span {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: var(--primary-color);
+        display: block;
+        margin: 0.5rem 0;
+      }
+
+      .times-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 2rem;
+        overflow-x: auto;
+      }
+
+      .times-table th,
+      .times-table td {
+        padding: 0.75rem;
+        text-align: center;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      .times-table th {
+        background-color: var(--primary-color);
+        color: white;
+      }
+
+      .times-table tr:nth-child(even) {
+        background-color: rgba(128, 128, 128, 0.05);
+      }
+
+      .table-container {
+        overflow-x: auto;
+      }
+
+      .cta-section {
+        text-align: center;
+        margin: 4rem 0;
+        animation: fadeIn 2.5s ease-in-out;
+      }
+
+      .cta-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: var(--primary-color);
+      }
+
+      .cta-desc {
+        margin-bottom: 2rem;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.6;
+      }
+
+      .download-btn {
+        display: inline-block;
+        transition: transform 0.3s ease;
+        margin-top: 1rem;
+      }
+
+      .download-btn:hover {
+        transform: scale(1.05);
+      }
+
+      .download-btn img {
+        max-width: 200px;
+        height: auto;
+      }
+
+      .testimonials {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin: 3rem 0;
+      }
+
+      .testimonial {
+        background-color: var(--card-bg);
+        border-radius: 10px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 8px var(--shadow-color);
+        text-align: center;
+        animation: slideUp 0.7s ease-out;
+      }
+
+      .testimonial-text {
+        font-style: italic;
+        margin-bottom: 1rem;
+        line-height: 1.6;
+      }
+
+      .testimonial-author {
+        font-weight: bold;
+        color: var(--primary-color);
+      }
+
+      footer {
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--secondary-color)
+        );
+        color: white;
+        text-align: center;
+        padding: 2rem 1rem;
+        margin-top: 3rem;
+      }
+
+      .footer-content {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .social-links {
+        margin: 1rem 0;
+      }
+
+      .social-links a {
+        color: white;
+        margin: 0 10px;
+        font-size: 1.5rem;
+        text-decoration: none;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideUp {
+        from {
+          transform: translateY(50px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .app-title {
+          font-size: 2rem;
+        }
+
+        .feature-card {
+          padding: 1.25rem;
+        }
+
+        .prayer-header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .times-table th,
+        .times-table td {
+          padding: 0.5rem;
+          font-size: 0.9rem;
+        }
+
+        .table-container {
+          overflow-x: auto;
+        }
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo-container">
+          <img
+            src="https://play-lh.googleusercontent.com/Y4K9n_LM749tn4sDOS4J0yiVfcrLhxfJu5J3UtMSc8Jk543zxkxzNMDkV4tw6E6s304=w480-h960-rw"
+            class="logo"
+            alt="İnternetsiz Namaz Vakti"
+          />
+        </div>
+        <h1 class="app-title">İnternetsiz Namaz Vakti</h1>
+        <p class="app-subtitle">
+          Namaz vakitlerini her yerde, her an, internetsiz takip edin!
+        </p>
+      </div>
+      <div class="wave"></div>
+    </header>
+
+    <div class="container">
+      <section class="features">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-plane"></i></div>
+          <h3 class="feature-title">İnternetsiz Çalışır</h3>
+          <p class="feature-desc">
+            İnternet bağlantınız olmadığında bile namaz vakitlerinizi kolayca
+            takip edin. Bir kere kurulum yaptıktan sonra sürekli çevrimiçi
+            olmanıza gerek yok!
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-globe"></i></div>
+          <h3 class="feature-title">Tüm Ülkeler</h3>
+          <p class="feature-desc">
+            Dünyanın neresinde olursanız olun, bulunduğunuz ülke ve şehre göre
+            doğru namaz vakitlerini öğrenin.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-bell"></i></div>
+          <h3 class="feature-title">Ezan Bildirimleri</h3>
+          <p class="feature-desc">
+            Namaz vakitlerini asla kaçırmayın. Sesli ve titreşimli bildirimlerle
+            vaktinde haberdar olun.
+          </p>
+        </div>
+      </section>
+
+      <section class="cta-section">
+        <h2 class="cta-title">Hemen İndirin!</h2>
+        <p class="cta-desc">
+          İnternetsiz Namaz Vakti uygulaması ile artık ibadet vakitlerinizi her
+          an, her yerde takip edebilirsiniz. İnternet olmadan da çalışan,
+          kullanımı kolay ve güvenilir namaz vakti takip uygulaması ile
+          ibadetlerinizi zamanında yerine getirin.
+        </p>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.meftuntech.namazvakti"
+          class="download-btn"
+          target="_blank"
+        >
+          <img
+            src="https://play.google.com/intl/en_us/badges/static/images/badges/tr_badge_web_generic.png"
+            alt="Google Play'den İndirin"
+          />
+        </a>
+      </section>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <p>© 2026 İnternetsiz Namaz Vakti - Tüm Hakları Saklıdır</p>
+        <p>Her yerde, her an ibadetlerinizi doğru vakitte gerçekleştirin!</p>
+      </div>
+    </footer>
+
+    <script>
+      // Karanlık/aydınlık tema otomatik algılaması hali hazırda CSS ile yapılmıştır
+
+      // Canlı geri sayım
+      function updateCountdown() {
+        const now = new Date();
+        const target = new Date();
+        target.setHours(4, 29, 0); // İmsak vakti
+
+        if (now > target) {
+          target.setDate(target.getDate() + 1);
+        }
+
+        const diff = target - now;
+        const hours = Math.floor(diff / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        const timeString = `${hours.toString().padStart(2, "0")}:${minutes
+          .toString()
+          .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
+        document.querySelector(".countdown span").textContent = timeString;
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+
+      // Animasyonlu öğelerin sayfa kaydırıldıkça gösterilmesi
+      const animateOnScroll = function () {
+        const elements = document.querySelectorAll(
+          ".feature-card, .testimonial",
+        );
+
+        elements.forEach((element) => {
+          const elementPosition = element.getBoundingClientRect().top;
+          const screenPosition = window.innerHeight / 1.3;
+
+          if (elementPosition < screenPosition) {
+            element.style.opacity = "1";
+            element.style.transform = "translateY(0)";
+          }
+        });
+      };
+
+      window.addEventListener("scroll", animateOnScroll);
+      animateOnScroll(); // İlk yükleme için
+    </script>
+  </body>
+</html>
