@@ -1,0 +1,329 @@
+{
+  "Altın Döviz Borsa Fiyatları": {
+    "appName": "Altın Döviz Borsa Fiyatları",
+    "appId": "com.necdetuygur.adbf",
+    "shortDescription": "Altın, Döviz, Borsa (BİST Hisse Senedi & Halka Arz), Crypto ve Petrol Fiyatları",
+    "longDescription": "Bir bakışta; Altın, Döviz, Borsa (BİST Hisse Senedi & Halka Arz), Crypto ve Petrol fiyatlarını gösteren mobil uygulamadır.",
+    "appIcon": "https://play-lh.googleusercontent.com/jDfWnTgw8ovkqqALnr8kFnS4PM_DFzrbLxxC4EqO04GgeSWIqQFbcP76D295hIgIpkg_=w240-h480-rw"
+  },
+  "Ders Çantası Kontrolcüsü": {
+    "appName": "Ders Çantası Kontrolcüsü",
+    "appId": "com.meftuntech.derscantasikontrolcusu",
+    "shortDescription": "Bugünkü dersleri gör, çantana koyman gerekenleri unutma.",
+    "longDescription": "Ders Çantası Kontrolcüsü, ders programına göre bugün hangi derslerin olduğunu ve çantana hangi kitap, defter ve malzemeleri koyman gerektiğini gösterir. Unutmayı azaltır, sabahları düzen ve rahatlık sağlar.",
+    "appIcon": "https://play-lh.googleusercontent.com/wFjo3-4-fkd_CzGm0k95Kumy_5u--GbE4XSfA6Ez_re77YE-_YQhW1p_3j50ZGbKnLXIRs3wj5XipU_tdfNJ2_M=w240-h480-rw"
+  },
+  "Düdük: Deprem Düdüğü": {
+    "appName": "Düdük: Deprem Düdüğü",
+    "appId": "com.meftuntech.duduk",
+    "shortDescription": "Düdük sesi uygulamasıdır.",
+    "longDescription": "Basıldığında ses çıkaran deprem düdüğü mobil uygulaması, kullanıcılara deprem anında sesli uyarı sağlamak amacıyla tasarlanmış bir uygulamadır. Bu uygulama, cep telefonu veya tablet gibi mobil cihazlara indirilerek kullanılabilir.",
+    "appIcon": "https://play-lh.googleusercontent.com/w8z-TnhntRu5zR5_f-NSxkAUlw30DwyD8OFtrQXDWFl4ElmYzsXNDk458BlawFvrEKmu=w240-h480-rw"
+  },
+  "WatchText": {
+    "appName": "WatchText",
+    "appId": "com.meftuntech.watchtext",
+    "shortDescription": "Tam ekran, yatay, dikkat dağıtmayan mesaj ve monitoring ekranı",
+    "longDescription": "Yazı Ekranı, tek bir mesajı tam ekranda, yatay ve sade biçimde gösterir. Renk, yazı stili ve kalınlık ayarlanabilir. Monitoring, hatırlatma ve sürekli gösterim ihtiyaçları için dikkat dağıtmayan bir deneyim sunar.",
+    "appIcon": "https://play-lh.googleusercontent.com/RdKQDMerVVCSZvmMYaYxsf_R07enJHnJDK5qpZb6wocW7c0_gvGhJ0cKcM7z5hPuobKNPb4Rxs0ay_nP5W5g=w240-h480-rw"
+  },
+  "İşlem Yap": {
+    "appName": "İşlem Yap",
+    "appId": "com.meftuntech.islem",
+    "shortDescription": "Matematik 4 işlem alıştırma uygulamasıdır",
+    "longDescription": "Matematik 4 İşlem Alıştırma Uygulaması, kullanıcıların toplama, çıkarma, çarpma ve bölme becerilerini geliştirmesi için tasarlanmış eğlenceli bir öğrenme oyunudur. Uygulama, her seviyeye uygun şekilde rastgele oluşturulan dört işlem problemleri sunar ve kullanıcıların bu soruları çözerek pratik yapmasını sağlar. Zamanla hızınızı ve doğruluğunuzu artırırken, matematiğe olan güveninizi de güçlendirebilirsiniz. Hem çocuklar hem de yetişkinler için ideal olan bu uygulama, öğrenmeyi sıkıcı olmaktan çıkarıp keyifli bir deneyime dönüştürür.",
+    "appIcon": "https://play-lh.googleusercontent.com/mTA8vqNY4A2Ej327ZVMzujo7zj_g0fbg2wIPtHJGj1l3-Lgxu6H5zsL9gpYHNQ34RyA=w240-h480-rw"
+  },
+  "Çarpım Tablosu Macerası": {
+    "appName": "Çarpım Tablosu Macerası",
+    "appId": "com.meftuntech.carpimtablosumacreasi",
+    "shortDescription": "Canavarları yen, çarpım tablosunu öğren. Eğlenceli, karanlık mod matematik oyunu",
+    "longDescription": "Çarpım Tablosu Macerası ile kahraman ol, canavarları yenerek 1x1 den 10x10 a kadar tüm çarpımları öğren. 10 seviye, karanlık mod, offline oynanış ve çocuklar için eğlenceli matematik macerası.",
+    "appIcon": "https://play-lh.googleusercontent.com/79t3N5k2wLqGp3_Bv7PjAFHCWptZ6ZapcwzDNwCJcDq8ROh8UuJEs3pNFnK87QIEyo5YpKRgkCxpOBHNATylyA=w240-h480-rw"
+  },
+  "Sayı Tahmin Oyunu": {
+    "appName": "Sayı Tahmin Oyunu",
+    "appId": "com.necdetuygur.sayitahmin",
+    "shortDescription": "Aklınızdan tuttuğunuz 0 ile 100 arasındaki sayıyı bulan mobil oyun uygulamasıdır",
+    "longDescription": "Aklınızdan sıfır ile yüz arasında bir sayı tutun. Tuttuğunuz sayıyı görürseniz \"Evet Var\" butonuna, görmezseniz \"Hayır Yok\" butonuna basın. \"Sayı Tahmin Oyunu\" aklınızdan tuttuğunuz sayıyı bulacaktır.",
+    "appIcon": "https://play-lh.googleusercontent.com/mHRwz07Ktl7nfVyhqR7BLHflG36-guOdEX-gG7WRFjZwBmGXOrtNoVQX0KR4HHCyLJc=w240-h480-rw"
+  },
+  "Kısa Sureler ve Namaz Duaları": {
+    "appName": "Kısa Sureler ve Namaz Duaları",
+    "appId": "com.meftuntech.ksnd",
+    "shortDescription": "İnternetsiz Kısa Sureler ve Namaz Duaları",
+    "longDescription": "\"Kısa Sureler ve Namaz Duaları\" uygulaması, sure ve duaların doğru şekilde ezberlenmesini sağlar. Sesli okuma, Arap harfleri, Latin harfleriyle okunuş, meal ve tefsir seçenekleriyle her yönüyle rehberlik eder.\n\n\"Kısa Sureler ve Namaz Duaları\" uygulaması, sure ve duaları kolayca ezberlemek isteyenler için ideal bir rehberdir. Sure ve duaların adlarını içerir; sesli okuma videolarıyla doğru telaffuzu öğrenmenize yardımcı olur. Arap harfleriyle yazılışı, Türkçe okunuşu ve Latin harfleriyle okuma kılavuzu sunar. Ayrıca meal ve detaylı tefsir seçenekleriyle sure ve duaların anlamını derinlemesine kavrayabilirsiniz. Her seviyeden kullanıcı için kolay ve anlaşılır bir ezberleme deneyimi sunar.",
+    "appIcon": "https://play-lh.googleusercontent.com/SBlqbIj_bEeSbnnlCf6TDxbiRMi1Oe5hx1ELyZla8HDDE3wKzEzE-0nTXWTk95WiT5M=w240-h480-rw"
+  },
+  "Not Defteri": {
+    "appName": "Not Defteri",
+    "appId": "com.necdetuygur.notdefteri",
+    "shortDescription": "Basit kullanışlı not defteri uygulamasıdır.",
+    "longDescription": "Not Defteri, kullanıcı dostu arayüzü ve işlevsel özellikleriyle, herhangi bir yerde herhangi bir zamanda notlarınızı almanızı sağlıyor ve bu notları istediğiniz zaman düzenleyebilmenize olanak tanıyor.",
+    "appIcon": "https://play-lh.googleusercontent.com/4mZ2vADzv8ZqpbD0kv1xonRpH4rDgxQe8fGA-XwX7NR95Py-cSnlsp-sTzp8mDhcWptA=w240-h480-rw"
+  },
+  "Altın Fiyatları": {
+    "appName": "Altın Fiyatları",
+    "appId": "com.meftuntech.altinfiyatlari",
+    "shortDescription": "Anlık altın fiyatlarını karşılaştırın, güncel verileri anında görün.",
+    "longDescription": "Farklı kaynaklardan gram, çeyrek, yarım ve tam altın fiyatlarını tek ekranda karşılaştırın. Anlık alış satış değerlerini ve değişim oranlarını takip ederek en doğru zamanda işlem yapın, piyasayı akıllıca yönetin.",
+    "appIcon": "https://play-lh.googleusercontent.com/Cj11IqleY7_VV1FbwzSIcVNAY9KZOLo3E8bs1PgdiAEjxJeLqbEZJmlUlXGM2wDZj4PGP8-127ezRV1LHfQa6A=w240-h480-rw"
+  },
+  "LPG Petrol Fiyatları": {
+    "appName": "LPG Petrol Fiyatları",
+    "appId": "com.meftuntech.lpgpetrol",
+    "shortDescription": "Güncel anlık yakıt fiyatları, her zaman cebinde!",
+    "longDescription": "📱 LPG Petrol Fiyatları – Güncel anlık yakıt fiyatları, her zaman cebinde! ⛽\n\nYakıt fiyatlarını takip etmek artık hem kolay hem de hızlı! \"LPG Petrol Fiyatları\" uygulamasıyla, seçtiğiniz ilde ve üç büyük ilde (İstanbul, Ankara, İzmir) güncel akaryakıt fiyatlarını anında görebilirsiniz. Sürpriz zamlar ya da kaçırılan indirimler tarih oluyor!\n\n🔍 Uygulama içeriği:\n• LPG\n• Kurşunsuz Benzin\n• Gaz Yağı\n• TP Motorin\n• Motorin\n• Kalorifer Yakıtı\n• Fuel Oil\n• Y.K. Fuel Oil\n• TPGaz\n\n💡 Kimin ihtiyacı olur ki diyorsan, şunu unutma: Araban var, kombi var, sanayi işi var, bu app herkes için var!\n\n🚗 Tatilde benzin istasyonu aramak yerine, bir tıkla fiyatları öğren.\n🏠 Evde kalorifer yakıtı mı lazım? Fiyatlar cebinde.\n🏢 İş yerinde büyük hacimli yakıt alımı mı yapılıyor? Karşılaştır, planla, kazan!\n\nArtık \"bu ilde yakıt daha ucuz muydu acaba?\" sorusu tarihe karışıyor. Hemen indir, zamlar seni değil sen zamları yakala!",
+    "appIcon": "https://play-lh.googleusercontent.com/oJ6EbvJHqEJ6-3mrhgbSZOOBy3ZrIrJYFY0bGkLPzho3w8G12ZCjK8Y8z55xai-dO4o=w240-h480-rw"
+  },
+  "Hisse Oyunu: Borsa Simülasyonu": {
+    "appName": "Hisse Oyunu: Borsa Simülasyonu",
+    "appId": "com.meftuntech.hisseoyunu",
+    "shortDescription": "Gerçek olmayan o anki borsa fiyatlarıyla simülasyon uygulamasıdır.",
+    "longDescription": "Para yatırmadan o anki borsa fiyatlarıyla alış satış yapma simülasyon uygulamasıdır.\n\nEğer borsa dünyasını keşfetmek ve hisse senedi alım satımının heyecanını yaşamak istiyorsanız, Borsa Hisse Simülasyon Oyunu uygulamamız tam size göre! Gerçek olmayan o anki borsa fiyatlarıyla alış ve satış yapma deneyimini sunan bu simülasyon uygulaması, yatırımlarınızı test etmenizi sağlar.\n\nUygulamamızda, sanal bir hesapla başlayarak gerçek zamanlı olarak güncellenen, ama gerçek olmayan borsa fiyatları üzerinden hisse senetleri ile alım satım yapabilirsiniz. \n\nBorsa Hisse Simülasyon Oyunu uygulaması, kullanıcılarına yatırımlarını yönetme yeteneklerini geliştirme fırsatı sunar.\n\nBorsa Hisse Simülasyon Oyunu uygulamasıyla borsa piyasasını öğrenme, stratejiler geliştirme ve risk almadan deneyim kazanma fırsatını yakalayın. Unutmayın, uygulamamız gerçek para veya gerçek yatırım danışmanlığı sunmaz.\n\nGerçek olmayan o anki borsa fiyatlarıyla simülasyon uygulamasıdır.",
+    "appIcon": "https://play-lh.googleusercontent.com/gGYzgLGnTq3Z1gMaXlEkHRJCX4zYPNPMrMBkBUpiXnMTV4zCRVNoIuv6ZVRdn8TpDgit=w240-h480-rw"
+  },
+  "Basit Araba Yarışı": {
+    "appName": "Basit Araba Yarışı",
+    "appId": "com.meftuntech.arabayarisi",
+    "shortDescription": "Hız tutkunlarının vazgeçilmezi!",
+    "longDescription": "Hız tutkunlarının vazgeçilmezi! En hızlı arabaları seç, motorun gücünü hisset ve rakiplerini geride bırak. Zorlu virajları ustalıkla al, nitroyu kullanarak fark yarat ve bitiş çizgisine ilk ulaşan sen ol!",
+    "appIcon": "https://play-lh.googleusercontent.com/LbN7RvfjRLtpYqUlf2M7ZAzOiZi04I_PO5su2IhqmtTILnKU_1V5_YAnwjuBIbiHjBU=w240-h480-rw"
+  },
+  "Su İçme Hatırlatıcısı": {
+    "appName": "Su İçme Hatırlatıcısı",
+    "appId": "com.meftuntech.suicmehatirlaticisi",
+    "shortDescription": "Su İçme Hatırlatıcısı - Gün Boyu Su İçmeyi Unutma!",
+    "longDescription": "Hedefin 2 litre su içmek ama bir bakmışsın kahveler uçuşmuş, çaylar dans etmiş, su yine köşede unutulmuş... İşte bu uygulama tam sana göre! 💃☕🚫💧\n\nSu İçme Hatırlatıcısı, gün boyunca yeterince su içmeni sağlayan, basit ama etkili bir mobil uygulamadır. Sağlığını önemseyenler için tasarlandı, unutkanlar için geliştirildi! 🧠✨\n\n🚀 Öne Çıkan Özellikler:\n✅ Günlük Hedef Belirleme: Kaç litre içmek istiyorsan, sen seç! (2L klasiktir ama sen istersen 3L iç, biz buradayız! 💪)\n\n✅ Sıvı Takibi: İçtiğin her yudum kayıt altında! (200ml çay mı içtin? Evet onu da sayıyoruz, ama suyu unutma! 😅)\n\n✅ Akıllı Hatırlatmalar: Su içmeyi unutanlar için nazik ama kararlı bildirimler!\n\n✅ Koyu Tema: Gözlerin rahat etsin diye gece moduyla karanlıkta bile seni yalnız bırakmaz! 🌙🖤\n\n✅ Kolay Kullanım: Uygulama arayüzü sade ve kullanıcı dostu – yaşlı teyzem bile rahatça kullanıyor! 👵📱\n\n✅ Geçmiş Kayıtlar: Ne zaman, ne kadar içtin? Tüm sıvı tüketim geçmişin elinin altında. Zamanda sıvı yolculuğuna çıkmaya hazır ol! ⏳💦",
+    "appIcon": "https://play-lh.googleusercontent.com/V0Z3TiWOzknQuGkOvGP3dXlGAwDZpO1TRbrnJJY7MM5hUPvAHLZu8QtP6880Kb_KpFdY=w240-h480-rw"
+  },
+  "CryptoPrice": {
+    "appName": "CryptoPrice",
+    "appId": "com.meftuntech.cryptoprice",
+    "shortDescription": "CryptoPrice: Anlık kripto kurları. Güncel fiyatlar.",
+    "longDescription": "CriptoPrice, canlı kripto kurları sunar. Anlık işlem fiyatlarını öğrenin. Bitcoin, Ethereum, Ripple ve daha fazlasının güncel verileri şimdi elinizde. Takip edin, kararlarınızı bilgiyle şekillendirin!",
+    "appIcon": "https://play-lh.googleusercontent.com/__xjhMWQJG8PrErmBpI40oISAdO5wc7F-J0PxiInBC32UDxvK_YPFQUufJut8KMF9Q=w240-h480-rw"
+  },
+  "Doğa Sesleri: Yağmur Sesleri": {
+    "appName": "Doğa Sesleri: Yağmur Sesleri",
+    "appId": "com.meftuntech.dogasesleri",
+    "shortDescription": "Doğa Sesleri - Rahatlama, Dinlendirici, Odaklanma, Çalışma, Ders Çalışma Sesleri",
+    "longDescription": "Doğa sesleriyle huzuru keşfedin!\n\nYağmur damlaları, rüzgar fısıltıları gibi doğal seslerle stresinizi azaltın, odaklanın ve rahatlayın. Çalışma, ders, meditasyon ve uyku için ideal. Dinlendirici atmosferiyle zihninizi sakinleştirin, veriminizi artırın!\n\nYağmur seslerinin huzur veren dünyasını keşfedin! Çalışma, ders, meditasyon ya da uyku için ideal bir ortam oluşturun. Sadece yağmur sesleriyle stresinizi azaltın, rahatlayın ve odaklanın. Günlük hayatın yorgunluğunu geride bırakmak ve daha verimli olmak isteyenler için mükemmel bir uygulama!",
+    "appIcon": "https://play-lh.googleusercontent.com/8m_SGLghXqCk-08ogm9H8I3-1RoViphufH1B2JGl4OmCL7l7_KuB8VWV2cIU8Iz_IA=w240-h480-rw"
+  },
+  "Kâr Hesaplayıcı": {
+    "appName": "Kâr Hesaplayıcı",
+    "appId": "com.meftuntech.kh",
+    "shortDescription": "Fiyatı ve maliyeti belli olan yatırımızın, kârını hesaplayan mobil uygulamadır.",
+    "longDescription": "Fiyatı ve maliyeti belli olan yatırımızın, kârını hesaplayan mobil uygulamadır.",
+    "appIcon": "https://play-lh.googleusercontent.com/rdwzMwK0dAhkYxh4GxSTL7FWGBbw15_nINSXl57uygMDqnt9YYuRtNT31eP1oetyLw0=w240-h480-rw"
+  },
+  "Döviz Fiyatları": {
+    "appName": "Döviz Fiyatları",
+    "appId": "com.meftuntech.dovizfiyatlari",
+    "shortDescription": "Anlık döviz kurlarını farklı kaynaklardan takip edin. USD, EUR, GBP bir arada!",
+    "longDescription": "Piyasa nabzını Döviz Fiyatları ile tutun! USD, EUR ve GBP kurlarını farklı kaynaklardan anlık karşılaştırın. \"Aşağı çek yenile\" özelliği ve sade arayüzle en güncel alış-satış verileri her an cebinizde. Üstelik tamamen ücretsiz!",
+    "appIcon": "https://play-lh.googleusercontent.com/lyDEJqCATr9D3lSnbB9HjIU2WKfrakCQnf4wnq7cmRIrX2uD5ob7IFvmaIetPiGStn0Zxao9Y3rBAmt0AAGb=w240-h480-rw"
+  },
+  "Connect Four": {
+    "appName": "Connect Four",
+    "appId": "com.meftuntech.connectfour",
+    "shortDescription": "Connect Four: Renkli disklerle dört sıra zafere koşun!",
+    "longDescription": "Connect Four, heyecan dolu strateji ve gülümsemenin buluştuğu klasik bir oyundur. İki oyuncu, 7 sütun ve 6 satırlık ızgarada renkli disklerini özenle yerleştirir. Her hamlede rakiplerine karşı zekice hamleler yaparak, dört diskli sırayı oluşturmaya çalışır. Akıl ve şansın harmanlandığı bu oyunda, hızlı düşünmek ve espriyle rakibi alt etmek büyük bir zafer getirir. Neşe dorukta, zafer sizin olsun!",
+    "appIcon": "https://play-lh.googleusercontent.com/gEtSF4MsbO_73hUUKwTsOwtWM9eRhPGEgkEWwIDaYeIk38nJMLOxRpzC34eoxjcdsqw=w240-h480-rw"
+  },
+  "Taş Kağıt Makas": {
+    "appName": "Taş Kağıt Makas",
+    "appId": "com.meftuntech.tkm",
+    "shortDescription": "Taş, makası kırar. Makas, kağıdı keser. Kağıt, taşı sarar.",
+    "longDescription": "Oyuncular aynı seçimi yaparsa, oyun berabere biter. Aksi takdirde, taş kağıt makas hiyerarşisine göre bir oyuncu galip gelir:\nTaş, makası kırar.\nMakas, kağıdı keser.\nKağıt, taşı sarar.\nOyun genellikle en iyi 2 veya 3 tura sahip bir maç şeklinde oynanır. Oyuncular her turda seçimlerini aynı anda yapar ve tur sonunda sonuçlar karşılaştırılır. En çok turu kazanan oyuncu oyunun galibi ilan edilir.",
+    "appIcon": "https://play-lh.googleusercontent.com/n8y-PEvdotkrUbeAYuipXF3hFQTj_XiAUE358cb0jvCOeWA3IVd7zEQexo8eRCNGWGfO=w240-h480-rw"
+  },
+  "Ödev Defteri": {
+    "appName": "Ödev Defteri",
+    "appId": "com.meftuntech.odevdefteri",
+    "shortDescription": "Notları düzenli bir şekilde kaydetmelerine yardımcı olan bir mobil uygulamadır.",
+    "longDescription": "Öğrencilerin okulda veya evde aldıkları notları düzenli bir şekilde kaydetmelerine yardımcı olan bir mobil uygulamadır. Bu uygulama, öğrencilere notlarını dijital ortamda tutma, organize etme ve istedikleri zaman erişme imkanı sağlar.",
+    "appIcon": "https://play-lh.googleusercontent.com/LziOFcxLwxDTumYfFQSpSYT5bVAIo1AorM5l7VD8ab60RblM8DJa8nr4hNZHSbmJM-2N=w240-h480-rw"
+  },
+  "Altın Döviz Borsa Pro": {
+    "appName": "Altın Döviz Borsa Pro",
+    "appId": "com.meftuntech.adbfpro",
+    "shortDescription": "Altın, Döviz, Borsa (BİST Hisse Senedi & Halka Arz), Crypto ve Petrol Fiyatları",
+    "longDescription": "Bir bakışta; Altın, Döviz, Borsa (BİST Hisse Senedi & Halka Arz), Crypto ve Petrol fiyatlarını gösteren mobil uygulamadır.",
+    "appIcon": "https://play-lh.googleusercontent.com/1NFa4xmzmIxisdLEJvJVQ5kZUHed2naRhymNbwRtBiZFMMSdZ6NDRhrElIRG0jBPUJscgZHhH3_sN7uLpK9Z6g=w240-h480-rw"
+  },
+  "Durağa Yaklaşan Otobüsler": {
+    "appName": "Durağa Yaklaşan Otobüsler",
+    "appId": "com.meftuntech.edyo",
+    "shortDescription": "İzmir otobüs duraklarına yaklaşan otobüsleri göstermektedir",
+    "longDescription": "İzmir otobüs duraklarına yaklaşan otobüsleri ve kaç durak kaldığı mesafe bilgisini gösteren mobil uygulamadır.\n\nSık kullandığınız durakları favorilerinize ekleyebilir, bir dahaki kullanımda tek dokunuşla ulaşabilirsiniz. Ne aramakla uğraşmak var, ne kaybolmak. Sadece bakın ve çıkın.",
+    "appIcon": "https://play-lh.googleusercontent.com/xMNZk-XEYUrCLNKGMB_e4g-YnrMNA-xL4vsL7I934i_CTyZty_5XBndRYvjH9XSMw98h=w240-h480-rw"
+  },
+  "Son Depremler": {
+    "appName": "Son Depremler",
+    "appId": "com.meftuntech.deprem",
+    "shortDescription": "Son depremler: Anında güncel bilgi!",
+    "longDescription": "Son depremler uygulaması, anlık ve güncel deprem bilgilerine hızlıca ulaşmanızı sağlar. Kullanıcı dostu arayüzü sayesinde, son yaşanan depremlerin konumları, büyüklükleri ve tarihleri hakkında hızlı bir şekilde bilgi edinebilirsiniz.",
+    "appIcon": "https://play-lh.googleusercontent.com/wGPxNeeUqYsa4ZSTaRbQu7w-1WrbGhQO6gGIn9xpLKAEyttvbft8N3vluwcwwgfRLGeE=w240-h480-rw"
+  },
+  "Kronometre: Süre Sayacı": {
+    "appName": "Kronometre: Süre Sayacı",
+    "appId": "com.meftuntech.kronometre",
+    "shortDescription": "Kronometre uygulaması",
+    "longDescription": "Kronometre zaman takibi uygulaması",
+    "appIcon": "https://play-lh.googleusercontent.com/h0xqdcEqlNMaQ3xrvEd4rmLrvwVQHYGRYo3JEN-EH1YG80NSh5K0L8wGQXvdEylQMg-v=w240-h480-rw"
+  },
+  "İnternetsiz İstihare Takip": {
+    "appName": "İnternetsiz İstihare Takip",
+    "appId": "com.meftuntech.istihare",
+    "shortDescription": "İnternetsiz: İstihare Takip Uygulaması",
+    "longDescription": "Önemli kararlarınızı alırken istihare namazlarınızın sonuçlarını takip eden mobil uygulamadır. Verileriniz telefonunuzda kalır, buluta yüklenmez.",
+    "appIcon": "https://play-lh.googleusercontent.com/PJshN3Q1vTsu-V7_haGiSusOhi8vfYuIEWN_HjnyaiWBAqW7OG2f2lDw_uEDE69P2A=w240-h480-rw"
+  },
+  "Pomodoro": {
+    "appName": "Pomodoro",
+    "appId": "com.meftuntech.pomodoro",
+    "shortDescription": "Pomodoro sayacı, alarm sesleri ve kolay kontrollerle üretkenliğini artır.",
+    "longDescription": "Pomodoro uygulaması, odaklanmayı kolaylaştırmak ve molaları doğru zamanda hatırlatmak için tasarlandı. Karmaşık ayarlar yok, dikkat dağıtan detaylar yok. Sadece çalışman ve dinlenmen için akıllı bir ritim var.\n\nPomodoro sayacı sayesinde çalışma ve mola sürelerini anlık olarak takip edebilirsiniz. Bir süre tamamlandığında alarm sesi çalar ve bir sonraki moda geçmeye hazır olursunuz.\n\nFocus modu açık olduğunda, çalışma süreniz geri sayılır. Belirtilen süre sona erdiğinde, alarm sesi duyulur ve mola zamanının geldiğini bildirir.\n\nBreak modu aktifken mola süresi geri sayar. Süre tamamlandığında alarm sesi çalar ve tekrar çalışmaya geçebilirsiniz.\n\nZamanın nasıl geçtiğini bir countdown animasyonu yardımıyla hissedeceksiniz. Butonlara dokunarak kolayca kontrol edebilirsiniz ve bunlar animasyonludur.\n\nUygulama içinde bulunan kontroller:\n\n* Başlat\n\n* Durdur\n\n* Duraklat\n\n* Sıfırla\n\nOdak ve Mola modları arasında geçiş yapabileceğiniz animasyonlu toggle butonlar bulunur ve ayarlar kısmında , odaklanma ve mola dakikalarını kendinize göre ayarlayabilirsiniz.\n\nUygulamamız öğrenciler, yazılımcılar, ofis çalışanları ve odaklanarak çalışmak isteyen herkes için ideal bir yardımcıdır. Basit görünür ama disiplin kazandırır. Sessizce çalışır, zamanı geldiğinde sizi nazikçe uyarır.\n\nOdaklanmak bazen zor olabilir, ama doğru zamanlama ile her şey daha kolay hale gelir. Bu uygulama tam olarak bunun için var.",
+    "appIcon": "https://play-lh.googleusercontent.com/_XAYWiQZkzeFZOeSuNzENLwtYRFWjW4GyPpeRpJLgNDzhRuFx550DwIJc2dIQLEG8VeWmDsyX9p3bNaOmKoOcA=w240-h480-rw"
+  },
+  "Fon Takip": {
+    "appName": "Fon Takip",
+    "appId": "com.meftuntech.fontakip",
+    "shortDescription": "Favori fonlarınızın fiyatını ve tarihini kolayca takip edin, her zaman görün.",
+    "longDescription": "Bu uygulama ile favori fonlarınızın fiyatını ve tarihini anında görebilirsiniz. Yeni veriler otomatik güncellenir ve eklediğiniz fonlar kaybolmaz, böylece her zaman en güncel bilgileri takip edebilirsiniz.",
+    "appIcon": "https://play-lh.googleusercontent.com/Lw1Qu9RNdQR901rcPqOmlgGw3q25RocTi71-yxfHDm2-H57pgvz1Ng8rHx2E5-a6ZeOhCMuTmRSfukLkKaaVXsQ=w240-h480-rw"
+  },
+  "Servis Müşteri Takip": {
+    "appName": "Servis Müşteri Takip",
+    "appId": "com.meftuntech.servismusteritakip",
+    "shortDescription": "Servise gelen müşterilere sıra numarası ile servis süresini gösteren uygulamadır",
+    "longDescription": "Servise gelen müşterilere sıra numarası verip; Geliş, Servis ve Ayrılış sürelerini tanımlayıp gösteren uygulamadır.",
+    "appIcon": "https://play-lh.googleusercontent.com/IiF6tAO732WsQKEqvkNiats2gmIBCSyn7FImyv7RbZ0PkFrWIRXinDwxzAeX1Uzfcg=w240-h480-rw"
+  },
+  "Borsa": {
+    "appName": "Borsa",
+    "appId": "com.necdetuygur.borsa",
+    "shortDescription": "BİST fiyatları gösterme uygulamasıdır.",
+    "longDescription": "BİST fiyatları gösterme ve kullanıcı hisse senedi yorumlama uygulamasıdır.",
+    "appIcon": "https://play-lh.googleusercontent.com/gAT6QOq2QaK3kq69Yp9PDr_0wofha-igcHT6qwgvdyFBKdZ0aBiZAVD93-S7PaFItp6g=w240-h480-rw"
+  },
+  "nCryptedText": {
+    "appName": "nCryptedText",
+    "appId": "com.meftuntech.ncryptedtext",
+    "shortDescription": "Create, store, and access your encrypted notes securely.",
+    "longDescription": "nCryptedText is a minimalist note app that lets you securely store your text with end-to-end encryption. When you open the app, simply enter a document name and press Go to be redirected to a unique URL. Your content is encrypted using your password with AES and stored securely. With its clean interface, you can quickly write, edit, and access your notes anytime, protected by a password only you know.",
+    "appIcon": "https://play-lh.googleusercontent.com/iCNVlWNPG1lhbxJ55GXVo48BteODUZV_VRL0d0lvNgBptGJNH5BMi2dkXQQZCfehlosojanGWDtO0g_hMlLK=w240-h480-rw"
+  },
+  "Tesbih": {
+    "appName": "Tesbih",
+    "appId": "com.meftuntech.tesbih",
+    "shortDescription": "Tesbih Zikirmatik",
+    "longDescription": "Tesbih Zikirmatik Uygulaması",
+    "appIcon": "https://play-lh.googleusercontent.com/4N6ysjfaXuEjBRZNaWjehy8DbvVn6StTqg-RBC9E06b-i8Wulns35TAnu55SSxLwrA=w240-h480-rw"
+  },
+  "Akü Durum İzle": {
+    "appName": "Akü Durum İzle",
+    "shortDescription": "Akü Durum Bilgisi İzle",
+    "longDescription": "Akü Durum Bilgisi İzleme Uygulaması",
+    "appIcon": "https://lh3.googleusercontent.com/2-Oz4CO7ALeSWEzL2G8m26YChG74tzzrAP5JsWaTORQUbUoh3zq271HaWhN2YC8D_DmX"
+  },
+  "Sınav Öncesi Moral Botu": {
+    "appName": "Sınav Öncesi Moral Botu",
+    "appId": "com.meftuntech.sinavoncesimoralbotu",
+    "shortDescription": "Sınav stresini yen! İnternetsiz nefes egzersizi, motivasyon ve kişisel notlar.",
+    "longDescription": "Sınav kaygısını \"Sınav Öncesi Moral Botu\" ile yönet! İnternet gerekmez. Nefes egzersizleri yap, motive edici görevleri favorilere ekle (⭐) veya kendi motivasyon notlarını oluşturup kaydet. Sakinleş, odaklan ve başar!",
+    "appIcon": "https://play-lh.googleusercontent.com/wdov2W0CxP9biE7KqV5TVSl1nW35PGKQrNelpj_MESiwnwbtaPVYYlL6HQZFoyyfovJFJS-e-3tfELn-a9JniA=w240-h480-rw"
+  },
+  "Geri Sayım: Süre Sayacı": {
+    "appName": "Geri Sayım: Süre Sayacı",
+    "appId": "com.meftuntech.countdown",
+    "shortDescription": "Belirli bir tarihe ne kadar kaldığını takip edin!",
+    "longDescription": "Sınav, düğün, nişan ya da herhangi özel bir günün tarihine saatine ne kadar kaldığını takip etmenizi sağlayan mobil uygulamadır.",
+    "appIcon": "https://play-lh.googleusercontent.com/FP4LngUkL_ZYRmgZVV1mwKqwabPZPbm3btioUvQ01RYgEGnpIzNU9EopRECNu_TIs8Y=w240-h480-rw"
+  },
+  "Halka Arz": {
+    "appName": "Halka Arz",
+    "appId": "com.meftuntech.halkaarz",
+    "shortDescription": "Halka arz edilen Borsa İstanbul hisse senetleri, şirket ve tarih bilgileri.",
+    "longDescription": "Borsa İstanbul'da halka arz edilecek hisse senetlerini, şirketleri ve tarihleri görüntüleyin. Yatırım yapmadan önce detaylara kolayca ulaşabileceğiniz pratik bir araç.",
+    "appIcon": "https://play-lh.googleusercontent.com/5f-fILhXr5TsTyFj86RAlUEJMEWsjdsGDhVE__hDmJswE9cxRBkp9qcL1U0_tHobxSo=w240-h480-rw"
+  },
+  "İlaç Hatırlatıcısı": {
+    "appName": "İlaç Hatırlatıcısı",
+    "appId": "com.meftuntech.ilachatirlaticisi",
+    "shortDescription": "İlaçlarınızı vaktinde alın! Kişiye özel bildirimler ve doz geçmişi cebinizde.",
+    "longDescription": "Sağlığınızı şansa bırakmayın! İlaç isimlerini ve saatlerini tanımlayın, özel bildirimlerle asla doz kaçırmayın. \"İlacı aldım\" özelliği ile kullanımlarınızı kaydedin ve geçmiş ekranından tüm sürecinizi kolayca takip edin. Sade ve güvenilir.",
+    "appIcon": "https://play-lh.googleusercontent.com/YLdmD3I95ui-DYhir8UywpbB6ESt82vUbsmV-JLNaY7Mh8TZF0asdLYqewW5hMoc50vpkQ35zg8LsZUG74-zDA=w240-h480-rw"
+  },
+  "Hafıza Oyunu: Eşini Bul": {
+    "appName": "Hafıza Oyunu: Eşini Bul",
+    "appId": "com.meftuntech.hafizaoyunu",
+    "shortDescription": "Eşini Bul - Hafıza ve Zeka Gelişim Oyunu",
+    "longDescription": "Bu eğlenceli hafıza oyunu, dikkatini ve mantık yürütme becerilerini güçlendirirken, zekanı keskinleştiriyor. Kartları çevir, eşleşmeleri bul ve zihinsel gücünü keşfet!\n\nEşini Bul - Hafıza ve Zeka Gelişim Oyunu, beynini çalıştırmak ve konsantrasyonunu artırmak için tasarlanmış interaktif bir deneyim sunuyor. Oyun, her seviye ilerledikçe odaklanmanı, mantık yürütme ve problem çözme becerilerini zorlayarak geliştiriyor. Doğru eşleşmeleri buldukça, zihinsel hızın ve hafızan güçleniyor. Renkli ve dinamik tasarımıyla eğlenceyi ve öğrenmeyi bir araya getiriyor; böylece oynarken zekanı geliştirmenin keyfini çıkaracaksın.",
+    "appIcon": "https://play-lh.googleusercontent.com/-J2ROjhCpSN_5IGDlzGz1fNZl-nGn-liGedw4ZVcyH2kOfTO95jZZgaZLkDuO5BJB0E=w240-h480-rw"
+  },
+  "İnternetsiz Muhasebe Takibi": {
+    "appName": "İnternetsiz Muhasebe Takibi",
+    "appId": "com.meftuntech.hesabim",
+    "shortDescription": "Hesabım: Kişisel ya da kurumsal gelir ve gider maliyet hesap uygulamasıdır.",
+    "longDescription": "Kişisel ya da kurumsal gelir ve gider maliyet hesabınızı yapabileceğiniz bir uygulamadır. Verileriniz telefonunuzda kalır, buluta yüklenmez.",
+    "appIcon": "https://play-lh.googleusercontent.com/CEVpXdQazR1Thh0CgX6QPwqVv-NGVC0aR6A9WRUuT8NbZEz4563ZPZzc1hNbq8lACpY=w240-h480-rw"
+  },
+  "İnternetsiz İftara Ne Kadar K.": {
+    "appName": "İnternetsiz İftara Ne Kadar K.",
+    "appId": "com.meftuntech.iftar",
+    "shortDescription": "İnternetsiz, iftar ve sahura ne kadar kaldığını gösteren mobil uygulamadır.",
+    "longDescription": "İnternetsiz, iftar ve sahur vakitlerine ne kadar kaldığını gösteren mobil uygulamadır. Verileriniz telefonunuzda kalır, buluta yüklenmez.",
+    "appIcon": "https://play-lh.googleusercontent.com/Iq9nLvwsCKMSd8qkXR3nsYJChDklGLZDMDYxLoENjSPe62vSCmpgjJa0jSkmKigU3ciO=w240-h480-rw"
+  },
+  "Kaza Namazları Takip": {
+    "appName": "Kaza Namazları Takip",
+    "appId": "com.meftuntech.kazanamazlari",
+    "shortDescription": "Geçmiş namaz borçlarını hesapla, takip et, düzenli şekilde kaza et!",
+    "longDescription": "Kaza Namazları Takip, geçmişte kılamadığın namazların hesabını tutmanı kolaylaştırır. Uygulama sayesinde başlangıç tarihini girerek kaza namazı borcunu hesaplayabilir, her vakit için ayrı ayrı takip edebilir ve işlediğin her değişikliği işlem geçmişinden görebilirsin.\n\nSabah, öğle, ikindi, akşam, yatsı ve vitir namazları için özel kayıt sistemiyle, kıldığın her kaza namazı artık unutulmaz. “Kaza namazı nedir?” ve “Nasıl kılınır?” gibi bilgilendirici sayfalar da yanında.\n\nKoyu/açık tema seçeneğiyle kişisel zevkine göre görünüm ayarla, uygulamayı dilediğin zaman sıfırla. Manevi sorumluluğunu hafiflet, ibadetini sistemli hale getir!",
+    "appIcon": "https://play-lh.googleusercontent.com/o2nAoRYLGOs8oBw0gBCkXvvBeYoVxUlFr85MTq1IlzdYOl8Fhgdt6nlo6SoLUuClzQ=w240-h480-rw"
+  },
+  "Film Öneri": {
+    "appName": "Film Öneri",
+    "appId": "com.meftuntech.filmoneri",
+    "shortDescription": "Film seçmek dert olmasın! En iyi önerileri hemen keşfet!",
+    "longDescription": "Film izlemek istiyorsun ama ne izleyeceğine karar veremiyor musun? İşte tam da bu sorunu çözecek harika bir uygulama! Film Öneri, sana özel film tavsiyeleri sunarak en iyi filmleri kolayca bulmanı sağlıyor. Tarzını seç, ruh haline uygun filmleri keşfet ve sinema keyfini zirveye çıkar!",
+    "appIcon": "https://play-lh.googleusercontent.com/v4iR_a9IT_72h0SufE6ecUKTuCmViFhGRpoF66pY_pUoWLV7nsWfudLpqd0HPyFxbjkie3lvUrBnXZBPsUsaPw=w240-h480-rw"
+  },
+  "İnternetsiz İngilizce Öğren": {
+    "appName": "İnternetsiz İngilizce Öğren",
+    "appId": "com.meftuntech.ingilizceogren",
+    "shortDescription": "En çok kullanılan 3700'den fazla kavramı öğretme uygulamasıdır.",
+    "longDescription": "En çok kullanılan 3700'den fazla kavramı öğretme uygulamasıdır.\nİngilizce dilinde en çok kullanılan 3700'den fazla kavramı öğretme uygulamasıdır. Verileriniz telefonunuzda kalır, buluta yüklenmez.",
+    "appIcon": "https://play-lh.googleusercontent.com/gs3KmiAsLMSlphDUNuGS1kgex5G1pshhRKhzk56YuqllVHtUgzs6sMKJYZZ12fqOGQQ=w240-h480-rw"
+  },
+  "Yazı Tura": {
+    "appName": "Yazı Tura",
+    "shortDescription": "Parayı havaya atın, yazı mı tura mı gelecek görün.",
+    "longDescription": "Yazı tura uygulaması ile parayı havaya atıp düştüğünde yazı mı tura mı geldiğini görebilirsiniz.",
+    "appIcon": "https://lh3.googleusercontent.com/92DaqcxBbzIPSdRfIB8BGP6im8rx_GP0k_ee0aMa5fC8IOA94FuYUqeIJe0yaZPOPQ0"
+  },
+  "Sayaç: Tesbih Zikirmatik": {
+    "appName": "Sayaç: Tesbih Zikirmatik",
+    "appId": "com.meftuntech.counter",
+    "shortDescription": "Basit, kullanışlı ve takibi kolay sayaç uygulamasıdır.",
+    "longDescription": "Kullanıcıların tekrarlayan sayımları kolaylıkla takip etmelerini sağlayan pratik bir mobil uygulamadır. Bu kullanıcı dostu uygulama, zikir, dua, tekrar eden aktiviteler veya görevler için özelleştirilebilir sayaçlar sunar. Kullanıcılar, basit arayüzü üzerinden sayıcıları artırabilir, azaltabilir ve sıfırlayabilir. Ayrıca, tamamlanan sayımları kaydedebilir ve ilerlemeyi takip edebilirler. Sayaç, Tesbih Uygulaması, zikir ibadetini düzenli tutmak ve hedeflere ulaşmak isteyen herkes için kullanışlı bir araçtır.",
+    "appIcon": "https://play-lh.googleusercontent.com/UAvyuQArF7T5Qx_O8gpiSt5EkwoVdf8Cwj6dyskTIWy0ABOU5uL4fFBg_QH-XmEQdhbE=w240-h480-rw"
+  },
+  "Basketbol Oyunu": {
+    "appName": "Basketbol Oyunu",
+    "appId": "com.meftuntech.basketboloyunu",
+    "shortDescription": "Basit ama bağımlılık yapan eğlenceli basketbol oyunu, hemen oyna!",
+    "longDescription": "Reflekslerinizi test eden eğlenceli bir basketbol oyunu! Topu kontrol edin, potalardan geçirerek skorunuzu artırın. Her geçişte heyecan artar. Basit oynanış, akıcı mekanikler ve bağımlılık yapan yapısıyla boş zamanlarınızın vazgeçilmezi olacak!",
+    "appIcon": "https://play-lh.googleusercontent.com/lwucdYmzDk76XpYXm129eWSOa7LtYyX1grRaldFTnPSR7VgcAVfUEcBmhI9HuNvQXXEBTWVYzM2Pa3R5f0olHMk=w240-h480-rw"
+  },
+  "İnternetsiz Namaz Vakti": {
+    "appName": "İnternetsiz Namaz Vakti",
+    "appId": "com.meftuntech.namazvakti",
+    "shortDescription": "Namaz vakitlerini internet bağlantısına ihtiyaç duymadan kolayca öğrenin!",
+    "longDescription": "İnternetsiz Namaz Vakti uygulaması, namaz zamanlarını internet bağlantısına ihtiyaç duymadan kolayca takip etmenizi sağlar. Şehir ve konum bilgilerinizi girerek, günlük namaz vakitlerinizi anında öğrenin. Kullanıcı dostu arayüzü ile her yaştan kullanıcının rahatlıkla faydalanabileceği pratik bir çözüm sunar. Namaz vaktinizi asla kaçırmayın, her an yanınızda olsun! Verileriniz telefonunuzda kalır, buluta yüklenmez.",
+    "appIcon": "https://play-lh.googleusercontent.com/Y4K9n_LM749tn4sDOS4J0yiVfcrLhxfJu5J3UtMSc8Jk543zxkxzNMDkV4tw6E6s304=w240-h480-rw"
+  }
+}
