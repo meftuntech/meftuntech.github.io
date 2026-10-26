@@ -1,0 +1,707 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MeftunTech - Geleceği Şekillendiren Yazılım Çözümleri</title>
+    <meta
+      name="description"
+      content="MeftunTech: Geleceği yenilikçi ve son teknoloji yazılım çözümleriyle şekillendiriyoruz. Mobil uygulamalarımızı ve vizyonumuzu keşfedin."
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      :root {
+        --primary: #10b981; /* Emerald */
+        --primary-glow: rgba(16, 185, 129, 0.5);
+        --secondary: #3b82f6; /* Blue */
+        --bg-dark: #0a0f1a;
+        --bg-card: rgba(255, 255, 255, 0.03);
+        --glass-border: rgba(255, 255, 255, 0.1);
+        --text-main: #f8fafc;
+        --text-dim: #94a3b8;
+        --nav-bg: rgba(10, 15, 26, 0.8);
+        --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Outfit", sans-serif;
+      }
+
+      body {
+        background-color: var(--bg-dark);
+        color: var(--text-main);
+        line-height: 1.6;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--bg-dark);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #1e293b;
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--primary);
+      }
+
+      /* Navigation */
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 1.5rem 2rem;
+        background: var(--nav-bg);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid var(--glass-border);
+        transition: var(--transition);
+      }
+
+      nav.scrolled {
+        padding: 1rem 2rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      .nav-logo {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        text-decoration: none;
+        color: var(--text-main);
+        font-weight: 700;
+        font-size: 1.5rem;
+        letter-spacing: -0.5px;
+      }
+
+      .nav-logo img {
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: var(--text-dim);
+        font-weight: 500;
+        transition: var(--transition);
+        font-size: 0.95rem;
+      }
+
+      .nav-links a:hover {
+        color: var(--primary);
+      }
+
+      /* Hero Section */
+      .hero {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 8rem 2rem 4rem;
+        background:
+          radial-gradient(
+            circle at top right,
+            rgba(16, 185, 129, 0.1),
+            transparent
+          ),
+          radial-gradient(
+            circle at bottom left,
+            rgba(59, 130, 246, 0.1),
+            transparent
+          );
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("hero-bg.png");
+        background-size: cover;
+        background-position: center;
+        opacity: 0.15;
+        z-index: -1;
+      }
+
+      .hero-content {
+        max-width: 900px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.5rem, 8vw, 4.5rem);
+        line-height: 1.1;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: fadeInUp 1s ease-out;
+      }
+
+      .hero p {
+        font-size: clamp(1.1rem, 3vw, 1.4rem);
+        color: var(--text-dim);
+        margin-bottom: 2.5rem;
+        animation: fadeInUp 1s ease-out 0.2s backwards;
+      }
+
+      .cta-group {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        animation: fadeInUp 1s ease-out 0.4s backwards;
+      }
+
+      .btn {
+        padding: 1rem 2.5rem;
+        border-radius: 50px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: var(--transition);
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .btn-primary {
+        background: var(--primary);
+        color: #000;
+        box-shadow: 0 0 20px var(--primary-glow);
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 0 30px var(--primary-glow);
+      }
+
+      .btn-outline {
+        border: 1px solid var(--glass-border);
+        color: #fff;
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      .btn-outline:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateY(-3px);
+      }
+
+      /* Section Global */
+      section {
+        padding: 6rem 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 4rem;
+      }
+
+      .section-header h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .section-header p {
+        color: var(--text-dim);
+        font-size: 1.1rem;
+      }
+
+      /* Apps Grid */
+      .apps-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .app-card {
+        background: var(--bg-card);
+        border: 1px solid var(--glass-border);
+        border-radius: 24px;
+        padding: 2rem;
+        text-decoration: none;
+        color: inherit;
+        transition: var(--transition);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .app-card:hover {
+        transform: translateY(-10px);
+        background: rgba(255, 255, 255, 0.06);
+        border-color: var(--primary);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      }
+
+      .app-icon-wrapper {
+        width: 90px;
+        height: 90px;
+        border-radius: 20px;
+        margin-bottom: 1.5rem;
+        overflow: hidden;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        transition: var(--transition);
+      }
+
+      .app-card:hover .app-icon-wrapper {
+        transform: scale(1.1) rotate(3deg);
+      }
+
+      .app-icon-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .app-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 0.75rem;
+        color: #fff;
+      }
+
+      .app-card p {
+        font-size: 0.95rem;
+        color: var(--text-dim);
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      /* Vision Section */
+      .vision {
+        display: flex;
+        gap: 4rem;
+        align-items: center;
+        background: var(--bg-card);
+        border-radius: 32px;
+        border: 1px solid var(--glass-border);
+        padding: 4rem;
+        margin-top: 4rem;
+      }
+
+      .vision-content {
+        flex: 1;
+      }
+
+      .vision-content h2 {
+        font-size: 2.2rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .vision-content p {
+        color: var(--text-dim);
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .vision-image {
+        flex: 1;
+        position: relative;
+      }
+
+      .vision-image img {
+        width: 100%;
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+      }
+
+      /* Contact & Footer */
+      .contact-footer {
+        background: #05080f;
+        border-top: 1px solid var(--glass-border);
+        padding: 6rem 2rem 2rem;
+        margin-top: 6rem;
+      }
+
+      .contact-grid {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 4rem;
+        margin-bottom: 4rem;
+      }
+
+      .contact-info h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        color: var(--primary);
+      }
+
+      .social-links {
+        display: flex;
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+      }
+
+      .social-link {
+        width: 45px;
+        height: 45px;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.05);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        text-decoration: none;
+        transition: var(--transition);
+        font-size: 1.2rem;
+        border: 1px solid var(--glass-border);
+      }
+
+      .social-link:hover {
+        background: var(--primary);
+        color: #000;
+        transform: translateY(-5px);
+      }
+
+      .footer-bottom {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-top: 2rem;
+        border-top: 1px solid var(--glass-border);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--text-dim);
+        font-size: 0.9rem;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .privacy-links {
+        display: flex;
+        gap: 1.5rem;
+      }
+
+      .privacy-links a {
+        color: var(--text-dim);
+        text-decoration: none;
+        transition: var(--transition);
+      }
+
+      .privacy-links a:hover {
+        color: #fff;
+      }
+
+      /* Animations */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition:
+          opacity 0.8s ease-out,
+          transform 0.8s ease-out;
+      }
+
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Responsive */
+      @media (max-width: 968px) {
+        .vision {
+          flex-direction: column;
+          padding: 2rem;
+          gap: 2rem;
+        }
+        .nav-links {
+          display: none;
+        }
+        .hero h1 {
+          font-size: 3rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .btn {
+          width: 100%;
+        }
+        .footer-bottom {
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="navbar">
+      <a href="#" class="nav-logo">
+        <img src="./MeftunTech.png" alt="MeftunTech Logo" />
+        MeftunTech
+      </a>
+      <div class="nav-links">
+        <a href="#apps">Uygulamalar</a>
+        <a href="#vision">Vizyonumuz</a>
+        <a
+          href="#contact"
+          onclick="window.location.href = 'mailto:meftuntech@gmail.com'"
+          >İletişim</a
+        >
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-content">
+        <h1>
+          Geleceği Yenilikçi ve Son Teknoloji Yazılım Çözümleriyle
+          Şekillendiriyoruz
+        </h1>
+        <p>
+          Mobil dünyada iz bırakan, kullanıcı odaklı ve yüksek performanslı
+          çözümler üreterek dijital dönüşümünüze güç katıyoruz.
+        </p>
+        <div class="cta-group">
+          <a href="#apps" class="btn btn-primary"
+            >Uygulamaları Keşfet <i class="fas fa-arrow-right"></i
+          ></a>
+          <a
+            href="https://play.google.com/store/apps/dev?id=9130623771728640226"
+            target="_blank"
+            class="btn btn-outline"
+            >Play Store <i class="fab fa-google-play"></i
+          ></a>
+        </div>
+      </div>
+    </header>
+
+    <section id="apps" class="reveal">
+      <div class="section-header">
+        <h2>Mobil Uygulamalarımız</h2>
+        <p>
+          Hayatınızı kolaylaştıran, eğlendiren ve her an yanınızda olan
+          projelerimiz.
+        </p>
+      </div>
+      <div class="apps-grid" id="apps-container">
+        <!-- Apps will be loaded here via JS -->
+        <div class="loading">Yükleniyor...</div>
+      </div>
+    </section>
+
+    <section id="vision" class="reveal">
+      <div class="vision">
+        <div class="vision-content">
+          <h2>Hakkımızda & Vizyonumuz</h2>
+          <p>
+            MeftunTech olarak, teknolojinin sınırlarını zorlayan ve kullanıcı
+            deneyimini merkeze alan yazılım çözümleri geliştiriyoruz. Her bir
+            projemizde kaliteyi, hızı ve yenilikçiliği bir araya getiriyoruz.
+          </p>
+          <p>
+            Amacımız, sadece kod yazmak değil; hayatın akışına değer katan
+            dijital ürünler tasarlayarak yarının teknolojisini bugünden inşa
+            etmektir.
+          </p>
+          <a href="mailto:meftuntech@gmail.com" class="btn btn-outline">
+            Bizimle İletişime Geç
+          </a>
+        </div>
+        <div class="vision-image">
+          <img src="hero-bg.png" alt="MeftunTech Vision" />
+        </div>
+      </div>
+    </section>
+
+    <footer class="contact-footer" id="contact">
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <h3>MeftunTech</h3>
+          <p>
+            Gelecek burada şekilleniyor. En yeni projelerimizden haberdar olmak
+            için bizi takip edin.
+          </p>
+          <div class="social-links">
+            <a
+              href="https://github.com/meftuntech"
+              target="_blank"
+              class="social-link"
+              title="GitHub"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              href="https://x.com/meftuntech"
+              target="_blank"
+              class="social-link"
+              title="X (Twitter)"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a
+              href="https://play.google.com/store/apps/dev?id=9130623771728640226"
+              target="_blank"
+              class="social-link"
+              title="Google Play"
+              ><i class="fab fa-google-play"></i
+            ></a>
+            <a
+              href="mailto:meftuntech@gmail.com"
+              class="social-link"
+              title="E-posta"
+              ><i class="fas fa-envelope"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="contact-info reveal">
+          <h3>Hızlı Erişim</h3>
+          <div style="display: flex; flex-direction: column; gap: 0.8rem">
+            <a
+              href="#apps"
+              style="color: var(--text-dim); text-decoration: none"
+              >Uygulamalar</a
+            >
+            <a
+              href="#vision"
+              style="color: var(--text-dim); text-decoration: none"
+              >Vizyonumuz</a
+            >
+            <a
+              href="./privacy_policy_tr"
+              style="color: var(--text-dim); text-decoration: none"
+              >Gizlilik Politikası (TR)</a
+            >
+            <a
+              href="./privacy_policy_en"
+              style="color: var(--text-dim); text-decoration: none"
+              >Privacy Policy (EN)</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy;
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          MeftunTech. Tüm hakları saklıdır.
+        </p>
+        <div class="privacy-links">
+          <a href="./privacy_policy_tr">Gizlilik (TR)</a>
+          <a href="./privacy_policy_en">Privacy (EN)</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Navbar Scroll Effect
+      window.addEventListener("scroll", () => {
+        const nav = document.getElementById("navbar");
+        if (window.scrollY > 50) {
+          nav.classList.add("scrolled");
+        } else {
+          nav.classList.remove("scrolled");
+        }
+      });
+
+      // Reveal Animations on Scroll
+      const observerOptions = {
+        threshold: 0.1,
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+          }
+        });
+      }, observerOptions);
+
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => observer.observe(el));
+
+      // Load Apps from JSON
+      async function loadApps() {
+        const container = document.getElementById("apps-container");
+        try {
+          const response = await fetch("apps.all.json");
+          const apps = await response.json();
+
+          container.innerHTML = "";
+
+          Object.values(apps).forEach((app) => {
+            const card = document.createElement("a");
+            card.href = `https://play.google.com/store/apps/details?id=${app.appId}`;
+            card.target = "_blank";
+            card.className = "app-card reveal";
+
+            card.innerHTML = `
+                        <div class="app-icon-wrapper">
+                            <img src="${app.appIcon}" alt="${app.appName}" loading="lazy">
+                        </div>
+                        <h3>${app.appName}</h3>
+                        <p>${app.shortDescription}</p>
+                    `;
+
+            container.appendChild(card);
+            observer.observe(card);
+          });
+        } catch (error) {
+          console.error("Apps load error:", error);
+          container.innerHTML =
+            '<p style="color: #ef4444;">Uygulamalar yüklenirken bir hata oluştu.</p>';
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", loadApps);
+    </script>
+  </body>
+</html>

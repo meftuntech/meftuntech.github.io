@@ -1,0 +1,131 @@
+index.html dosyasını incele.
+index2.html dosyasını incele.
+apps.all.json dosyasını incele.
+
+Buradaki uygulamaları baz alarak, isim açıklama ikonları da kullanarak, index3.html dosyası oluştur. şu anki index.html dosyası en olarak hazırlandı. index3.html dosyası tr olarak hazırlanacak.
+en sloganımız: Innovating the Future with Cutting-edge Software Solutions
+tr sloganı oluştururken en olanı türkçeye çevirerek kullan.
+Elinden gelenin en iyisini yap, landing page oluştur.
+iletişim için mailito ile meftuntech@gmail.com adresini kullanabilirsin.
+github adresi https://github.com/meftuntech olarak kullan.
+x.com için meftuntech adresini kullan.
+
+---
+---
+---
+
+Aşağıdaki dosyaları dikkatlice analiz et ve içeriklerini tam olarak anlamaya odaklan:
+
+* `index.html`
+* `index2.html`
+* `apps.all.json`
+
+### 🎯 Amaç
+
+Bu dosyalarda yer alan yapı, tasarım dili ve özellikle `apps.all.json` içerisindeki uygulama verilerini baz alarak **yeni ve modern bir landing page** oluştur.
+
+Oluşturulacak dosya:
+
+* `index3.html`
+
+---
+
+## 🧠 Yapılması Gerekenler
+
+### 1. 📊 Veri Analizi
+
+* `apps.all.json` dosyasındaki tüm uygulamaları incele
+* Her uygulama için:
+
+  * İsim
+  * Açıklama
+  * İkon
+    bilgilerini eksiksiz kullan
+
+---
+
+### 2. 🌐 Dil ve İçerik
+
+* `index3.html` tamamen **Türkçe (TR)** olacak
+* Mevcut `index.html` İngilizce hazırlanmış, onu referans al ama birebir kopyalama
+* Aşağıdaki İngilizce sloganı Türkçeye çevirerek kullan:
+
+> Innovating the Future with Cutting-edge Software Solutions
+
+✔ Türkçe slogan:
+
+> Geleceği Yenilikçi ve Son Teknoloji Yazılım Çözümleriyle Şekillendiriyoruz
+
+---
+
+### 3. 🎨 Landing Page Tasarımı
+
+Modern, profesyonel ve etkileyici bir landing page oluştur. Aşağıdaki bölümleri mutlaka içersin:
+
+#### 🧩 Hero Section
+
+* Büyük başlık (Türkçe slogan)
+* Kısa açıklama
+* Call-to-action butonu (örnek: "Uygulamaları Keşfet")
+
+#### 📦 Uygulamalar Bölümü
+
+* `apps.all.json` verilerinden dinamik olarak oluşturulmuş kartlar
+* Her kartta:
+
+  * İkon
+  * Uygulama adı
+  * Açıklama
+
+#### 💡 Hakkımızda / Vizyon
+
+* Yazılım odaklı, yenilikçi bir marka dili kullan
+* Kısa ama etkili bir tanıtım yazısı ekle
+
+#### 📬 İletişim Bölümü
+
+Aşağıdaki bilgileri kullan:
+
+* 📧 Email: `mailto:meftuntech@gmail.com`
+* 🐙 GitHub: [https://github.com/meftuntech](https://github.com/meftuntech)
+* 🐦 X (Twitter): [https://x.com/meftuntech](https://x.com/meftuntech)
+* Google Play Store: [https://play.google.com/store/apps/dev?id=9130623771728640226](https://play.google.com/store/apps/dev?id=9130623771728640226)
+* Gizlilik Politikası TR: ./privacy_policy_tr
+* Gizlilik Politikası EN: ./privacy_policy_en
+
+---
+
+### 4. 🧱 Teknik Beklentiler
+
+* Responsive tasarım yap (mobil uyumlu)
+* Modern CSS kullan (Flexbox veya Grid tercih et)
+* Temiz ve okunabilir HTML yapısı oluştur
+* Gerekirse minimal JS ile etkileşim ekle
+* Performans odaklı ol
+
+---
+
+### 5. ✨ Ekstra Kalite Detayları
+
+* Hover efektleri
+* Yumuşak animasyonlar
+* Modern font kullanımı
+* Minimal ama şık renk paleti
+
+---
+
+## 🚀 Beklenen Sonuç
+
+Ortaya çıkan `index3.html`:
+
+* Modern
+* Profesyonel
+* Türkçe
+* Kullanıcıyı etkileyen
+* Gerçek bir startup landing page kalitesinde olmalı
+
+---
+
+## 💬 Son Dokunuş
+
+Kod yazarken sadece çalışan bir sayfa değil, **ürünü temsil eden bir vitrin** oluşturduğunu unutma. Animasyonlu ve dikkat çekici olmalı.
