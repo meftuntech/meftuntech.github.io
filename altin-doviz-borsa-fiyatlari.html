@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Altın Döviz Borsa Fiyatları</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap"
+    />
+    <style>
+      :root {
+        --primary-color: #ffd700;
+        --secondary-color: #1976d2;
+        --text-color: #333;
+        --bg-color: #fff;
+        --card-bg: #f9f9f9;
+        --shadow-color: rgba(0, 0, 0, 0.1);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --primary-color: #ffd700;
+          --secondary-color: #64b5f6;
+          --text-color: #f0f0f0;
+          --bg-color: #121212;
+          --card-bg: #1e1e1e;
+          --shadow-color: rgba(255, 255, 255, 0.05);
+        }
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Fira Sans", sans-serif;
+      }
+
+      body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        transition: all 0.3s ease;
+        line-height: 1.6;
+      }
+
+      header {
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--secondary-color)
+        );
+        padding: 3rem 1.5rem;
+        text-align: center;
+        color: #000;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .header-content {
+        position: relative;
+        z-index: 2;
+        padding: 1rem;
+      }
+
+      .header-content h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+      }
+
+      .header-content p {
+        font-size: 1.2rem;
+        font-weight: 400;
+      }
+
+      .logo-container {
+        margin-bottom: 2rem;
+      }
+
+      .logo {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        box-shadow: 0 10px 25px var(--shadow-color);
+        transition: transform 0.3s ease;
+      }
+
+      .logo:hover {
+        transform: scale(1.05);
+      }
+
+      .floating-coins {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+
+      .coin {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background-color: #fff;
+        border-radius: 50%;
+        opacity: 0.2;
+        animation: float 15s infinite linear;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0) rotate(0deg);
+          opacity: 0;
+        }
+        10% {
+          opacity: 0.2;
+        }
+        90% {
+          opacity: 0.2;
+        }
+        100% {
+          transform: translateY(-500px) rotate(360deg);
+          opacity: 0;
+        }
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+      }
+
+      .section {
+        margin-bottom: 4rem;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeIn 0.8s forwards;
+        padding: 0 1rem;
+      }
+
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .section:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+      .section:nth-child(2) {
+        animation-delay: 0.3s;
+      }
+      .section:nth-child(3) {
+        animation-delay: 0.5s;
+      }
+      .section:nth-child(4) {
+        animation-delay: 0.7s;
+      }
+
+      .section-title {
+        font-size: 2rem;
+        margin-bottom: 1.8rem;
+        color: var(--primary-color);
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+      }
+
+      .section-title i {
+        margin-right: 0.8rem;
+      }
+
+      .section p {
+        margin-bottom: 2rem;
+        font-size: 1.1rem;
+      }
+
+      .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2.5rem;
+      }
+
+      .feature-card {
+        background-color: var(--card-bg);
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: 0 5px 15px var(--shadow-color);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px var(--shadow-color);
+      }
+
+      .feature-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 5px;
+        height: 100%;
+        background: linear-gradient(
+          to bottom,
+          var(--primary-color),
+          var(--secondary-color)
+        );
+      }
+
+      .feature-icon {
+        font-size: 2.2rem;
+        margin-bottom: 1.2rem;
+        color: var(--primary-color);
+      }
+
+      .feature-title {
+        font-size: 1.3rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+
+      .feature-card p {
+        margin-bottom: 0;
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+
+      .screenshot-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2.5rem;
+      }
+
+      .screenshot {
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px var(--shadow-color);
+        transition: transform 0.3s ease;
+      }
+
+      .screenshot:hover {
+        transform: scale(1.05);
+      }
+
+      .screenshot img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .sample-data {
+        background-color: var(--card-bg);
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: 0 5px 15px var(--shadow-color);
+        overflow-x: auto;
+        margin-bottom: 2rem;
+      }
+
+      .sample-data h3 {
+        margin-bottom: 1.2rem;
+        color: var(--primary-color);
+        font-size: 1.4rem;
+        font-weight: 600;
+      }
+
+      .sample-data p {
+        margin-bottom: 1rem;
+        font-size: 1rem;
+      }
+
+      .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 1.5rem;
+      }
+
+      .data-table th,
+      .data-table td {
+        padding: 1rem;
+        text-align: left;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+      }
+
+      .data-table th {
+        font-weight: 600;
+      }
+
+      .cta-container {
+        text-align: center;
+        margin: 4rem 0;
+        padding: 2rem;
+        background-color: var(--card-bg);
+        border-radius: 12px;
+        box-shadow: 0 5px 15px var(--shadow-color);
+      }
+
+      .cta-container h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: var(--primary-color);
+        font-weight: 700;
+      }
+
+      .cta-container p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+      }
+
+      .cta-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        text-decoration: none;
+        padding: 0.5rem;
+      }
+
+      .cta-button:hover {
+        transform: scale(1.05);
+      }
+
+      .cta-button img {
+        max-width: 250px;
+        height: auto;
+      }
+
+      footer {
+        background-color: var(--card-bg);
+        padding: 3rem 2rem;
+        text-align: center;
+        border-top: 1px solid rgba(128, 128, 128, 0.2);
+        font-size: 1.1rem;
+      }
+
+      .pulse {
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .container {
+          padding: 2rem 1.5rem;
+        }
+
+        .features {
+          grid-template-columns: 1fr;
+        }
+
+        .screenshot-container {
+          grid-template-columns: 1fr;
+        }
+
+        .section-title {
+          font-size: 1.8rem;
+        }
+
+        .header-content h1 {
+          font-size: 2rem;
+        }
+
+        .feature-card {
+          padding: 1.8rem;
+        }
+
+        .sample-data {
+          padding: 1.5rem;
+        }
+
+        .data-table th,
+        .data-table td {
+          padding: 0.8rem;
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        .header-content h1 {
+          font-size: 1.8rem;
+        }
+
+        .section-title {
+          font-size: 1.6rem;
+        }
+
+        .feature-card {
+          padding: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="floating-coins" id="floating-coins"></div>
+      <div class="header-content">
+        <div class="logo-container">
+          <img
+            src="https://play-lh.googleusercontent.com/jDfWnTgw8ovkqqALnr8kFnS4PM_DFzrbLxxC4EqO04GgeSWIqQFbcP76D295hIgIpkg_=w480-h960-rw"
+            class="logo"
+            alt="Altın Döviz Borsa Fiyatları"
+          />
+        </div>
+        <h1>Altın Döviz Borsa Fiyatları</h1>
+        <p>Anlık piyasa verilerini tek uygulamada takip edin!</p>
+      </div>
+    </header>
+
+    <div class="container">
+      <section class="section">
+        <h2 class="section-title">
+          <i class="fas fa-star"></i> Neden Bu Uygulama?
+        </h2>
+        <p>
+          Altın Döviz Borsa Fiyatları, ekonomik verileri anlık olarak takip
+          etmenizi sağlayan, kullanımı kolay ve güvenilir bir mobil uygulamadır.
+          Tüm finansal verilere tek bir yerden erişim sağlayarak,
+          yatırımlarınızı daha bilinçli yönetmenize yardımcı olur.
+        </p>
+
+        <div class="features">
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-coins"></i></div>
+            <h3 class="feature-title">Altın Fiyatları</h3>
+            <p>
+              Gram, çeyrek, yarım ve tam altın fiyatlarını anlık takip edin.
+              Değişim yüzdelerini görün ve yarınki beklentileri inceleyin.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-dollar-sign"></i></div>
+            <h3 class="feature-title">Döviz Fiyatları</h3>
+            <p>
+              USD, EUR, GBP gibi temel döviz kurlarını anlık izleyin. Değişim
+              oranlarını ve yarınki tahminleri görüntüleyin.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fab fa-bitcoin"></i></div>
+            <h3 class="feature-title">Kripto Para Fiyatları</h3>
+            <p>
+              Bitcoin, Ethereum, XRP, Dogecoin ve diğer popüler kripto paraların
+              TL karşılığını anlık olarak takip edin.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-gas-pump"></i></div>
+            <h3 class="feature-title">LPG ve Petrol Fiyatları</h3>
+            <p>
+              Farklı şehirlerdeki akaryakıt fiyatlarını karşılaştırın ve
+              değişimleri takip edin.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+            <h3 class="feature-title">Borsa Fiyatları</h3>
+            <p>
+              İstediğiniz hisse senetlerini ekleyerek kişiselleştirilmiş bir
+              portföy oluşturun ve değerlerini anlık takip edin.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-bullhorn"></i></div>
+            <h3 class="feature-title">BİST Halka Arzlar</h3>
+            <p>
+              Borsa İstanbul'daki yeni halka arzları kaçırmayın, fırsatları
+              değerlendirin.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">
+          <i class="fas fa-table"></i> Örnek Veriler
+        </h2>
+        <p>Uygulamanın sunduğu zengin veri içeriğinden bazı örnekler:</p>
+
+        <div class="sample-data">
+          <h3>Altın Fiyatları</h3>
+          <p>Güncellenme: 2025-04-24 22:09:04</p>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Gram <br />Alış / Satış</th>
+                  <th>Çeyrek <br />Alış / Satış</th>
+                  <th>Yarım <br />Alış / Satış</th>
+                  <th>Tam <br />Alış / Satış</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>BHT</td>
+                  <td>4107 / 4108</td>
+                  <td>6572 / 6716</td>
+                  <td>13103 / 13433</td>
+                  <td>27139 / 27374</td>
+                </tr>
+                <tr>
+                  <td>BIP</td>
+                  <td>4107 / 4108</td>
+                  <td>6806 / 6870</td>
+                  <td>13611 / 13739</td>
+                  <td>26570 / 27095</td>
+                </tr>
+                <tr>
+                  <td>DVZ</td>
+                  <td>4108 / 4109</td>
+                  <td>6645 / 6797</td>
+                  <td>13249 / 13595</td>
+                  <td>26582 / 27108</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="sample-data">
+          <h3>Döviz Fiyatları</h3>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>USD <br />Alış / Satış</th>
+                  <th>EUR <br />Alış / Satış</th>
+                  <th>GBP <br />Alış / Satış</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>BIP</td>
+                  <td>38,31 / 38,32</td>
+                  <td>43,69 / 43,79</td>
+                  <td>51,18 / 51,26</td>
+                </tr>
+                <tr>
+                  <td>DVZ</td>
+                  <td>38,31 / 38,32</td>
+                  <td>43,69 / 43,77</td>
+                  <td>51,17 / 51,25</td>
+                </tr>
+                <tr>
+                  <td>UZP</td>
+                  <td>38,31 / 38,32</td>
+                  <td>43,67 / 43,79</td>
+                  <td>50,93 / 51,19</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="sample-data">
+          <h3>Kripto Para Fiyatları</h3>
+          <p>Güncellenme: 2025-04-24 22:08:55</p>
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Kripto</th>
+                  <th>Değer (TRY)</th>
+                  <th>Kripto</th>
+                  <th>Değer (TRY)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>USDTTRY</td>
+                  <td>38,27</td>
+                  <td>BTCTRY</td>
+                  <td>3.571.394,31</td>
+                </tr>
+                <tr>
+                  <td>ETHTRY</td>
+                  <td>67.305,04</td>
+                  <td>XRPTRY</td>
+                  <td>84,19</td>
+                </tr>
+                <tr>
+                  <td>DOGETRY</td>
+                  <td>6,89</td>
+                  <td>BNBTRY</td>
+                  <td>22.862,75</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">
+          <i class="fas fa-check-circle"></i> Sağladığı Avantajlar
+        </h2>
+        <p>
+          "Altın Döviz Borsa Fiyatları" uygulaması ile zamanınızı ve enerjinizi
+          verimli kullanarak ekonomik verilere anında erişin!
+        </p>
+
+        <div class="features">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-tachometer-alt"></i>
+            </div>
+            <h3 class="feature-title">Anlık Güncelleme</h3>
+            <p>
+              Tüm piyasa verilerine anlık erişim sağlayarak, güncel değerleri
+              kaçırmadan takip edin.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+            <h3 class="feature-title">Kullanım Kolaylığı</h3>
+            <p>
+              Sade ve şık tasarımıyla her yaştan kullanıcı için kolay kullanım
+              deneyimi sunar.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-chart-bar"></i></div>
+            <h3 class="feature-title">Zengin Veri</h3>
+            <p>
+              Altın, döviz, borsa, kripto para ve petrol fiyatları gibi tüm
+              ekonomik verileri tek bir uygulamada bulabilirsiniz.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-magic"></i></div>
+            <h3 class="feature-title">Tahmin Özellikleri</h3>
+            <p>
+              Yarınki beklentileri gösteren tahmin özellikleriyle
+              yatırımlarınızı daha bilinçli yönetin.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="cta-container">
+        <h2>Hemen İndirin!</h2>
+        <p>Finansal verileri takip etmenin en kolay yolu</p>
+        <a
+          target="_blank"
+          href="https://play.google.com/store/apps/details?id=com.necdetuygur.adbf"
+          class="cta-button pulse"
+        >
+          <img
+            src="https://play.google.com/intl/en_us/badges/static/images/badges/tr_badge_web_generic.png"
+            alt="Google Play'den İndirin"
+          />
+        </a>
+      </div>
+
+      <section class="section">
+        <h2 class="section-title">
+          <i class="fas fa-comment"></i> Kullanıcı Yorumları
+        </h2>
+        <div class="features">
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-user"></i></div>
+            <h3 class="feature-title">Ahmet Y.</h3>
+            <p>
+              "Altın yatırımcısı olarak bu uygulama hayatımı kolaylaştırdı.
+              Anlık fiyat takibi sayesinde en uygun zamanda alım satım
+              yapabiliyorum."
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-user"></i></div>
+            <h3 class="feature-title">Ayşe K.</h3>
+            <p>
+              "Döviz kurlarını sürekli takip etmem gerekiyor ve bu uygulama tam
+              ihtiyacım olan her şeyi sunuyor. Arayüzü çok temiz ve kullanımı
+              çok kolay!"
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-user"></i></div>
+            <h3 class="feature-title">Mehmet B.</h3>
+            <p>
+              "Borsa ve kripto para yatırımlarımı tek bir uygulamadan takip
+              edebilmek büyük kolaylık. Kesinlikle tavsiye ediyorum."
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <p>© 2026 Altın Döviz Borsa Fiyatları | Tüm hakları saklıdır.</p>
+    </footer>
+
+    <script>
+      // Floating coins animation
+      document.addEventListener("DOMContentLoaded", function () {
+        const floatingCoins = document.getElementById("floating-coins");
+        for (let i = 0; i < 20; i++) {
+          const coin = document.createElement("div");
+          coin.className = "coin";
+          coin.style.left = `${Math.random() * 100}%`;
+          coin.style.top = `${Math.random() * 100}%`;
+          coin.style.animationDuration = `${15 + Math.random() * 10}s`;
+          coin.style.animationDelay = `${Math.random() * 5}s`;
+          floatingCoins.appendChild(coin);
+        }
+
+        // Stagger section animations
+        const sections = document.querySelectorAll(".section");
+        sections.forEach((section, index) => {
+          section.style.animationDelay = `${0.1 + index * 0.2}s`;
+        });
+      });
+
+      // Check for system theme and apply
+      function applyTheme() {
+        const isDarkMode =
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.body.classList.toggle("dark-theme", isDarkMode);
+      }
+
+      // Apply theme on load
+      applyTheme();
+
+      // Listen for theme changes
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", applyTheme);
+    </script>
+  </body>
+</html>

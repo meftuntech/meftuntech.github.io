@@ -1,0 +1,1346 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MeftunTech - İleri Düzey Yazılım Çözümleri</title>
+    <meta
+      name="description"
+      content="MeftunTech: İleri Düzey Yazılım Çözümleriyle Geleceğe Yenilik Katıyoruz. Mobil uygulamalarımızı keşfedin."
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+    />
+    <style>
+      :root {
+        --primary: #3b82f6;
+        --primary-dark: #2563eb;
+        --secondary: #10b981;
+        --bg-light: #f8fafc;
+        --bg-dark: #0f172a;
+        --card-light: #ffffff;
+        --card-dark: #1e293b;
+        --text-light: #334155;
+        --text-dark: #cbd5e1;
+        --heading-light: #0f172a;
+        --heading-dark: #f8fafc;
+        --glass-bg: rgba(255, 255, 255, 0.7);
+        --glass-border: rgba(255, 255, 255, 0.2);
+        --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --glass-bg: rgba(30, 41, 59, 0.7);
+          --glass-border: rgba(255, 255, 255, 0.05);
+          --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        }
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Outfit", sans-serif;
+      }
+
+      body {
+        background-color: var(--bg-light);
+        color: var(--text-light);
+        transition:
+          background-color 0.3s,
+          color 0.3s;
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: var(--bg-dark);
+          color: var(--text-dark);
+        }
+      }
+
+      /* Hero Section */
+      .hero {
+        position: relative;
+        padding: 6rem 2rem 4rem;
+        text-align: center;
+        background: linear-gradient(
+          135deg,
+          rgba(59, 130, 246, 0.1),
+          rgba(16, 185, 129, 0.1)
+        );
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(
+          circle,
+          rgba(59, 130, 246, 0.15) 0%,
+          rgba(255, 255, 255, 0) 50%
+        );
+        z-index: 0;
+        animation: rotate 30s linear infinite;
+      }
+
+      @keyframes rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .logo {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        margin-bottom: 2rem;
+        border: 4px solid white;
+        transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .logo {
+          border-color: var(--card-dark);
+        }
+      }
+
+      .logo:hover {
+        transform: scale(1.1) rotate(5deg);
+      }
+
+      .hero h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: var(--heading-light);
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .hero h1 {
+          color: var(--heading-dark);
+        }
+      }
+
+      .hero p {
+        font-size: 1.4rem;
+        font-weight: 300;
+        margin-bottom: 2rem;
+      }
+
+      /* Main Content */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+      }
+
+      .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+        color: var(--heading-light);
+        font-weight: 600;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .section-title {
+          color: var(--heading-dark);
+        }
+      }
+
+      /* Apps Grid */
+      .apps-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .app-card {
+        text-decoration: none;
+        background: var(--glass-bg);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid var(--glass-border);
+        border-radius: 20px;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        box-shadow: var(--glass-shadow);
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        cursor: pointer;
+        color: inherit;
+      }
+
+      .app-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        border-color: rgba(59, 130, 246, 0.3);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .app-card:hover {
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+          border-color: rgba(59, 130, 246, 0.5);
+        }
+      }
+
+      .app-icon-wrapper {
+        width: 100px;
+        height: 100px;
+        border-radius: 24px;
+        overflow: hidden;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .app-card:hover .app-icon-wrapper {
+        transform: scale(1.05);
+      }
+
+      .app-icon {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .app-title {
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 0.8rem;
+        color: var(--heading-light);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .app-title {
+          color: var(--heading-dark);
+        }
+      }
+
+      .app-desc {
+        font-size: 0.95rem;
+        opacity: 0.9;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      /* Footer */
+      footer {
+        background-color: var(--card-light);
+        padding: 4rem 2rem 2rem;
+        text-align: center;
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        footer {
+          background-color: var(--card-dark);
+          border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+      }
+
+      .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .social-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: var(--bg-light);
+        color: var(--primary);
+        font-size: 1.5rem;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .social-icon {
+          background: var(--bg-dark);
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+      }
+
+      .social-icon:hover {
+        background: var(--primary);
+        color: white;
+        transform: translateY(-5px);
+      }
+
+      .copyright {
+        font-size: 0.9rem;
+        opacity: 0.7;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+        .hero p {
+          font-size: 1.1rem;
+        }
+        .section-title {
+          font-size: 2rem;
+        }
+        .apps-grid {
+          grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-content">
+        <img src="./MeftunTech.png" alt="MeftunTech Logo" class="logo" />
+        <h1>MeftunTech</h1>
+        <p>İleri Düzey Yazılım Çözümleriyle Geleceğe Yenilik Katıyoruz</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <h2 class="section-title">Uygulamalarımız</h2>
+      <div class="apps-grid">
+        <a
+          href="https://play.google.com/store/apps/details?id=com.necdetuygur.adbf"
+          target="_blank"
+          class="app-card"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="https://play-lh.googleusercontent.com/jDfWnTgw8ovkqqALnr8kFnS4PM_DFzrbLxxC4EqO04GgeSWIqQFbcP76D295hIgIpkg_=w240-h480-rw"
+              alt="Altın Döviz Borsa Fiyatları"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">Altın Döviz Borsa Fiyatları</h3>
+            <p class="app-desc">
+              Altın, Döviz, Borsa (BİST Hisse Senedi & Halka Arz), Crypto ve
+              Petrol Fiyatları
+            </p>
+          </div>
+        </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.meftuntech.derscantasikontrolcusu"
+          target="_blank"
+          class="app-card"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="https://play-lh.googleusercontent.com/wFjo3-4-fkd_CzGm0k95Kumy_5u--GbE4XSfA6Ez_re77YE-_YQhW1p_3j50ZGbKnLXIRs3wj5XipU_tdfNJ2_M=w240-h480-rw"
+              alt="Ders Çantası Kontrolcüsü"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">Ders Çantası Kontrolcüsü</h3>
+            <p class="app-desc">
+              Bugünkü dersleri gör, çantana koyman gerekenleri unutma.
+            </p>
+          </div>
+        </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.meftuntech.duduk"
+          target="_blank"
+          class="app-card"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="https://play-lh.googleusercontent.com/w8z-TnhntRu5zR5_f-NSxkAUlw30DwyD8OFtrQXDWFl4ElmYzsXNDk458BlawFvrEKmu=w240-h480-rw"
+              alt="Düdük: Deprem Düdüğü"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">Düdük: Deprem Düdüğü</h3>
+            <p class="app-desc">Düdük sesi uygulamasıdır.</p>
+          </div>
+        </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.meftuntech.watchtext"
+          target="_blank"
+          class="app-card"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="https://play-lh.googleusercontent.com/RdKQDMerVVCSZvmMYaYxsf_R07enJHnJDK5qpZb6wocW7c0_gvGhJ0cKcM7z5hPuobKNPb4Rxs0ay_nP5W5g=w240-h480-rw"
+              alt="WatchText"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">WatchText</h3>
+            <p class="app-desc">
+              Tam ekran, yatay, dikkat dağıtmayan mesaj ve monitoring ekranı
+            </p>
+          </div>
+        </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.meftuntech.islem"
+          target="_blank"
+          class="app-card"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="https://play-lh.googleusercontent.com/mTA8vqNY4A2Ej327ZVMzujo7zj_g0fbg2wIPtHJGj1l3-Lgxu6H5zsL9gpYHNQ34RyA=w240-h480-rw"
+              alt="İşlem Yap"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">İşlem Yap</h3>
+            <p class="app-desc">Matematik 4 işlem alıştırma uygulamasıdır</p>
+          </div>
+        </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.meftuntech.carpimtablosumacreasi"
+          target="_blank"
+          class="app-card"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="https://play-lh.googleusercontent.com/79t3N5k2wLqGp3_Bv7PjAFHCWptZ6ZapcwzDNwCJcDq8ROh8UuJEs3pNFnK87QIEyo5YpKRgkCxpOBHNATylyA=w240-h480-rw"
+              alt="Çarpım Tablosu Macerası"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">Çarpım Tablosu Macerası</h3>
+            <p class="app-desc">
+              Canavarları yen, çarpım tablosunu öğren. Eğlenceli, karanlık mod
+              matematik oyunu
+            </p>
+          </div>
+        </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.necdetuygur.sayitahmin"
+          target="_blank"
+          class="app-card"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="https://play-lh.googleusercontent.com/mHRwz07Ktl7nfVyhqR7BLHflG36-guOdEX-gG7WRFjZwBmGXOrtNoVQX0KR4HHCyLJc=w240-h480-rw"
+              alt="Sayı Tahmin Oyunu"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">Sayı Tahmin Oyunu</h3>
+            <p class="app-desc">
+              Aklınızdan tuttuğunuz 0 ile 100 arasındaki sayıyı bulan mobil oyun
+              uygulamasıdır
+            </p>
+          </div>
+        </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.meftuntech.ksnd"
+          target="_blank"
+          class="app-card"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="https://play-lh.googleusercontent.com/SBlqbIj_bEeSbnnlCf6TDxbiRMi1Oe5hx1ELyZla8HDDE3wKzEzE-0nTXWTk95WiT5M=w240-h480-rw"
+              alt="Kısa Sureler ve Namaz Duaları"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">Kısa Sureler ve Namaz Duaları</h3>
+            <p class="app-desc">İnternetsiz Kısa Sureler ve Namaz Duaları</p>
+          </div>
+        </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.necdetuygur.notdefteri"
+          target="_blank"
+          class="app-card"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="https://play-lh.googleusercontent.com/4mZ2vADzv8ZqpbD0kv1xonRpH4rDgxQe8fGA-XwX7NR95Py-cSnlsp-sTzp8mDhcWptA=w240-h480-rw"
+              alt="Not Defteri"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">Not Defteri</h3>
+            <p class="app-desc">Basit kullanışlı not defteri uygulamasıdır.</p>
+          </div>
+        </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.meftuntech.altinfiyatlari"
+          target="_blank"
+          class="app-card"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="https://play-lh.googleusercontent.com/Cj11IqleY7_VV1FbwzSIcVNAY9KZOLo3E8bs1PgdiAEjxJeLqbEZJmlUlXGM2wDZj4PGP8-127ezRV1LHfQa6A=w240-h480-rw"
+              alt="Altın Fiyatları"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">Altın Fiyatları</h3>
+            <p class="app-desc">
+              Anlık altın fiyatlarını karşılaştırın, güncel verileri anında
+              görün.
+            </p>
+          </div>
+        </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.meftuntech.lpgpetrol"
+          target="_blank"
+          class="app-card"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="https://play-lh.googleusercontent.com/oJ6EbvJHqEJ6-3mrhgbSZOOBy3ZrIrJYFY0bGkLPzho3w8G12ZCjK8Y8z55xai-dO4o=w240-h480-rw"
+              alt="LPG Petrol Fiyatları"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">LPG Petrol Fiyatları</h3>
+            <p class="app-desc">
+              Güncel anlık yakıt fiyatları, her zaman cebinde!
+            </p>
+          </div>
+        </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.meftuntech.hisseoyunu"
+          target="_blank"
+          class="app-card"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="https://lh3.googleusercontent.com/d0G8gFtaOtWhnI_XVI6uezrBstyA24RS-iSxoP0M1AwSgcz1MittRHfVGMf3cb1kOW-2XepAvTCPCBAzAH2k"
+              alt="Hisse Oyunu: Borsa Simülasyonu"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">Hisse Oyunu: Borsa Simülasyonu</h3>
+            <p class="app-desc">
+              Gerçek olmayan o anki borsa fiyatlarıyla simülasyon uygulamasıdır.
+            </p>
+          </div>
+        </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.meftuntech.arabayarisi"
+          target="_blank"
+          class="app-card"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="https://play-lh.googleusercontent.com/LbN7RvfjRLtpYqUlf2M7ZAzOiZi04I_PO5su2IhqmtTILnKU_1V5_YAnwjuBIbiHjBU=w240-h480-rw"
+              alt="Basit Araba Yarışı"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">Basit Araba Yarışı</h3>
+            <p class="app-desc">Hız tutkunlarının vazgeçilmezi!</p>
+          </div>
+        </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.meftuntech.suicmehatirlaticisi"
+          target="_blank"
+          class="app-card"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="https://play-lh.googleusercontent.com/V0Z3TiWOzknQuGkOvGP3dXlGAwDZpO1TRbrnJJY7MM5hUPvAHLZu8QtP6880Kb_KpFdY=w240-h480-rw"
+              alt="Su İçme Hatırlatıcısı"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">Su İçme Hatırlatıcısı</h3>
+            <p class="app-desc">
+              Su İçme Hatırlatıcısı - Gün Boyu Su İçmeyi Unutma!
+            </p>
+          </div>
+        </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.meftuntech.cryptoprice"
+          target="_blank"
+          class="app-card"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="https://play-lh.googleusercontent.com/__xjhMWQJG8PrErmBpI40oISAdO5wc7F-J0PxiInBC32UDxvK_YPFQUufJut8KMF9Q=w240-h480-rw"
+              alt="CryptoPrice"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">CryptoPrice</h3>
+            <p class="app-desc">
+              CryptoPrice: Anlık kripto kurları. Güncel fiyatlar.
+            </p>
+          </div>
+        </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.meftuntech.dogasesleri"
+          target="_blank"
+          class="app-card"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="https://play-lh.googleusercontent.com/8m_SGLghXqCk-08ogm9H8I3-1RoViphufH1B2JGl4OmCL7l7_KuB8VWV2cIU8Iz_IA=w240-h480-rw"
+              alt="Doğa Sesleri: Yağmur Sesleri"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">Doğa Sesleri: Yağmur Sesleri</h3>
+            <p class="app-desc">
+              Doğa Sesleri - Rahatlama, Dinlendirici, Odaklanma, Çalışma, Ders
+              Çalışma Sesleri
+            </p>
+          </div>
+        </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.meftuntech.kh"
+          target="_blank"
+          class="app-card"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="https://play-lh.googleusercontent.com/rdwzMwK0dAhkYxh4GxSTL7FWGBbw15_nINSXl57uygMDqnt9YYuRtNT31eP1oetyLw0=w240-h480-rw"
+              alt="Kâr Hesaplayıcı"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">Kâr Hesaplayıcı</h3>
+            <p class="app-desc">
+              Fiyatı ve maliyeti belli olan yatırımızın, kârını hesaplayan mobil
+              uygulamadır.
+            </p>
+          </div>
+        </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.meftuntech.dovizfiyatlari"
+          target="_blank"
+          class="app-card"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="https://play-lh.googleusercontent.com/lyDEJqCATr9D3lSnbB9HjIU2WKfrakCQnf4wnq7cmRIrX2uD5ob7IFvmaIetPiGStn0Zxao9Y3rBAmt0AAGb=w240-h480-rw"
+              alt="Döviz Fiyatları"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">Döviz Fiyatları</h3>
+            <p class="app-desc">
+              Anlık döviz kurlarını farklı kaynaklardan takip edin. USD, EUR,
+              GBP bir arada!
+            </p>
+          </div>
+        </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.meftuntech.connectfour"
+          target="_blank"
+          class="app-card"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="https://play-lh.googleusercontent.com/gEtSF4MsbO_73hUUKwTsOwtWM9eRhPGEgkEWwIDaYeIk38nJMLOxRpzC34eoxjcdsqw=w240-h480-rw"
+              alt="Connect Four"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">Connect Four</h3>
+            <p class="app-desc">
+              Connect Four: Renkli disklerle dört sıra zafere koşun!
+            </p>
+          </div>
+        </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.meftuntech.tkm"
+          target="_blank"
+          class="app-card"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="https://play-lh.googleusercontent.com/n8y-PEvdotkrUbeAYuipXF3hFQTj_XiAUE358cb0jvCOeWA3IVd7zEQexo8eRCNGWGfO=w240-h480-rw"
+              alt="Taş Kağıt Makas"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">Taş Kağıt Makas</h3>
+            <p class="app-desc">
+              Taş, makası kırar. Makas, kağıdı keser. Kağıt, taşı sarar.
+            </p>
+          </div>
+        </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.meftuntech.odevdefteri"
+          target="_blank"
+          class="app-card"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="https://play-lh.googleusercontent.com/LziOFcxLwxDTumYfFQSpSYT5bVAIo1AorM5l7VD8ab60RblM8DJa8nr4hNZHSbmJM-2N=w240-h480-rw"
+              alt="Ödev Defteri"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">Ödev Defteri</h3>
+            <p class="app-desc">
+              Notları düzenli bir şekilde kaydetmelerine yardımcı olan bir mobil
+              uygulamadır.
+            </p>
+          </div>
+        </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.meftuntech.adbfpro"
+          target="_blank"
+          class="app-card"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="https://play-lh.googleusercontent.com/1NFa4xmzmIxisdLEJvJVQ5kZUHed2naRhymNbwRtBiZFMMSdZ6NDRhrElIRG0jBPUJscgZHhH3_sN7uLpK9Z6g=w240-h480-rw"
+              alt="Altın Döviz Borsa Pro"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">Altın Döviz Borsa Pro</h3>
+            <p class="app-desc">
+              Altın, Döviz, Borsa (BİST Hisse Senedi & Halka Arz), Crypto ve
+              Petrol Fiyatları
+            </p>
+          </div>
+        </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.meftuntech.edyo"
+          target="_blank"
+          class="app-card"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="https://play-lh.googleusercontent.com/xMNZk-XEYUrCLNKGMB_e4g-YnrMNA-xL4vsL7I934i_CTyZty_5XBndRYvjH9XSMw98h=w240-h480-rw"
+              alt="Durağa Yaklaşan Otobüsler"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">Durağa Yaklaşan Otobüsler</h3>
+            <p class="app-desc">
+              İzmir otobüs duraklarına yaklaşan otobüsleri göstermektedir
+            </p>
+          </div>
+        </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.meftuntech.deprem"
+          target="_blank"
+          class="app-card"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="https://play-lh.googleusercontent.com/wGPxNeeUqYsa4ZSTaRbQu7w-1WrbGhQO6gGIn9xpLKAEyttvbft8N3vluwcwwgfRLGeE=w240-h480-rw"
+              alt="Son Depremler"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">Son Depremler</h3>
+            <p class="app-desc">Son depremler: Anında güncel bilgi!</p>
+          </div>
+        </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.meftuntech.kronometre"
+          target="_blank"
+          class="app-card"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="https://play-lh.googleusercontent.com/h0xqdcEqlNMaQ3xrvEd4rmLrvwVQHYGRYo3JEN-EH1YG80NSh5K0L8wGQXvdEylQMg-v=w240-h480-rw"
+              alt="Kronometre: Süre Sayacı"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">Kronometre: Süre Sayacı</h3>
+            <p class="app-desc">Kronometre uygulaması</p>
+          </div>
+        </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.meftuntech.istihare"
+          target="_blank"
+          class="app-card"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="https://play-lh.googleusercontent.com/PJshN3Q1vTsu-V7_haGiSusOhi8vfYuIEWN_HjnyaiWBAqW7OG2f2lDw_uEDE69P2A=w240-h480-rw"
+              alt="İnternetsiz İstihare Takip"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">İnternetsiz İstihare Takip</h3>
+            <p class="app-desc">İnternetsiz: İstihare Takip Uygulaması</p>
+          </div>
+        </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.meftuntech.pomodoro"
+          target="_blank"
+          class="app-card"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="https://lh3.googleusercontent.com/WkRYnPHyW82M9sa3o8Q9xcOeLzWdg9_6htnBL8opAR9Wcwglurx4QKHE29FPF1S6MCjWPFupjvAD7OLNikYEMJE"
+              alt="Pomodoro"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">Pomodoro</h3>
+            <p class="app-desc">
+              Pomodoro sayacı, alarm sesleri ve kolay kontrollerle üretkenliğini
+              artır.
+            </p>
+          </div>
+        </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.meftuntech.fontakip"
+          target="_blank"
+          class="app-card"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="https://play-lh.googleusercontent.com/Lw1Qu9RNdQR901rcPqOmlgGw3q25RocTi71-yxfHDm2-H57pgvz1Ng8rHx2E5-a6ZeOhCMuTmRSfukLkKaaVXsQ=w240-h480-rw"
+              alt="Fon Takip"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">Fon Takip</h3>
+            <p class="app-desc">
+              Favori fonlarınızın fiyatını ve tarihini kolayca takip edin, her
+              zaman görün.
+            </p>
+          </div>
+        </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.meftuntech.servismusteritakip"
+          target="_blank"
+          class="app-card"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="https://play-lh.googleusercontent.com/IiF6tAO732WsQKEqvkNiats2gmIBCSyn7FImyv7RbZ0PkFrWIRXinDwxzAeX1Uzfcg=w240-h480-rw"
+              alt="Servis Müşteri Takip"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">Servis Müşteri Takip</h3>
+            <p class="app-desc">
+              Servise gelen müşterilere sıra numarası ile servis süresini
+              gösteren uygulamadır
+            </p>
+          </div>
+        </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.necdetuygur.borsa"
+          target="_blank"
+          class="app-card"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="https://play-lh.googleusercontent.com/gAT6QOq2QaK3kq69Yp9PDr_0wofha-igcHT6qwgvdyFBKdZ0aBiZAVD93-S7PaFItp6g=w240-h480-rw"
+              alt="Borsa"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">Borsa</h3>
+            <p class="app-desc">BİST fiyatları gösterme uygulamasıdır.</p>
+          </div>
+        </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.meftuntech.ncryptedtext"
+          target="_blank"
+          class="app-card"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="https://play-lh.googleusercontent.com/iCNVlWNPG1lhbxJ55GXVo48BteODUZV_VRL0d0lvNgBptGJNH5BMi2dkXQQZCfehlosojanGWDtO0g_hMlLK=w240-h480-rw"
+              alt="nCryptedText"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">nCryptedText</h3>
+            <p class="app-desc">
+              Create, store, and access your encrypted notes securely.
+            </p>
+          </div>
+        </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.meftuntech.tesbih"
+          target="_blank"
+          class="app-card"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="https://play-lh.googleusercontent.com/4N6ysjfaXuEjBRZNaWjehy8DbvVn6StTqg-RBC9E06b-i8Wulns35TAnu55SSxLwrA=w240-h480-rw"
+              alt="Tesbih"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">Tesbih</h3>
+            <p class="app-desc">Tesbih Zikirmatik</p>
+          </div>
+        </a>
+        <a href="#" class="app-card">
+          <div class="app-icon-wrapper">
+            <img
+              src="https://lh3.googleusercontent.com/2-Oz4CO7ALeSWEzL2G8m26YChG74tzzrAP5JsWaTORQUbUoh3zq271HaWhN2YC8D_DmX"
+              alt="Akü Durum İzle"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">Akü Durum İzle</h3>
+            <p class="app-desc">Akü Durum Bilgisi İzle</p>
+          </div>
+        </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.meftuntech.sinavoncesimoralbotu"
+          target="_blank"
+          class="app-card"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="https://play-lh.googleusercontent.com/wdov2W0CxP9biE7KqV5TVSl1nW35PGKQrNelpj_MESiwnwbtaPVYYlL6HQZFoyyfovJFJS-e-3tfELn-a9JniA=w240-h480-rw"
+              alt="Sınav Öncesi Moral Botu"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">Sınav Öncesi Moral Botu</h3>
+            <p class="app-desc">
+              Sınav stresini yen! İnternetsiz nefes egzersizi, motivasyon ve
+              kişisel notlar.
+            </p>
+          </div>
+        </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.meftuntech.countdown"
+          target="_blank"
+          class="app-card"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="https://play-lh.googleusercontent.com/FP4LngUkL_ZYRmgZVV1mwKqwabPZPbm3btioUvQ01RYgEGnpIzNU9EopRECNu_TIs8Y=w240-h480-rw"
+              alt="Geri Sayım: Süre Sayacı"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">Geri Sayım: Süre Sayacı</h3>
+            <p class="app-desc">
+              Belirli bir tarihe ne kadar kaldığını takip edin!
+            </p>
+          </div>
+        </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.meftuntech.halkaarz"
+          target="_blank"
+          class="app-card"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="https://play-lh.googleusercontent.com/5f-fILhXr5TsTyFj86RAlUEJMEWsjdsGDhVE__hDmJswE9cxRBkp9qcL1U0_tHobxSo=w240-h480-rw"
+              alt="Halka Arz"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">Halka Arz</h3>
+            <p class="app-desc">
+              Halka arz edilen Borsa İstanbul hisse senetleri, şirket ve tarih
+              bilgileri.
+            </p>
+          </div>
+        </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.meftuntech.ilachatirlaticisi"
+          target="_blank"
+          class="app-card"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="https://play-lh.googleusercontent.com/YLdmD3I95ui-DYhir8UywpbB6ESt82vUbsmV-JLNaY7Mh8TZF0asdLYqewW5hMoc50vpkQ35zg8LsZUG74-zDA=w240-h480-rw"
+              alt="İlaç Hatırlatıcısı"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">İlaç Hatırlatıcısı</h3>
+            <p class="app-desc">
+              İlaçlarınızı vaktinde alın! Kişiye özel bildirimler ve doz geçmişi
+              cebinizde.
+            </p>
+          </div>
+        </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.meftuntech.hafizaoyunu"
+          target="_blank"
+          class="app-card"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="https://play-lh.googleusercontent.com/-J2ROjhCpSN_5IGDlzGz1fNZl-nGn-liGedw4ZVcyH2kOfTO95jZZgaZLkDuO5BJB0E=w240-h480-rw"
+              alt="Hafıza Oyunu: Eşini Bul"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">Hafıza Oyunu: Eşini Bul</h3>
+            <p class="app-desc">Eşini Bul - Hafıza ve Zeka Gelişim Oyunu</p>
+          </div>
+        </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.meftuntech.hesabim"
+          target="_blank"
+          class="app-card"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="https://play-lh.googleusercontent.com/CEVpXdQazR1Thh0CgX6QPwqVv-NGVC0aR6A9WRUuT8NbZEz4563ZPZzc1hNbq8lACpY=w240-h480-rw"
+              alt="İnternetsiz Muhasebe Takibi"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">İnternetsiz Muhasebe Takibi</h3>
+            <p class="app-desc">
+              Hesabım: Kişisel ya da kurumsal gelir ve gider maliyet hesap
+              uygulamasıdır.
+            </p>
+          </div>
+        </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.meftuntech.iftar"
+          target="_blank"
+          class="app-card"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="https://play-lh.googleusercontent.com/Iq9nLvwsCKMSd8qkXR3nsYJChDklGLZDMDYxLoENjSPe62vSCmpgjJa0jSkmKigU3ciO=w240-h480-rw"
+              alt="İnternetsiz İftara Ne Kadar K."
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">İnternetsiz İftara Ne Kadar K.</h3>
+            <p class="app-desc">
+              İnternetsiz, iftar ve sahura ne kadar kaldığını gösteren mobil
+              uygulamadır.
+            </p>
+          </div>
+        </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.meftuntech.kazanamazlari"
+          target="_blank"
+          class="app-card"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="https://play-lh.googleusercontent.com/o2nAoRYLGOs8oBw0gBCkXvvBeYoVxUlFr85MTq1IlzdYOl8Fhgdt6nlo6SoLUuClzQ=w240-h480-rw"
+              alt="Kaza Namazları Takip"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">Kaza Namazları Takip</h3>
+            <p class="app-desc">
+              Geçmiş namaz borçlarını hesapla, takip et, düzenli şekilde kaza
+              et!
+            </p>
+          </div>
+        </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.meftuntech.filmoneri"
+          target="_blank"
+          class="app-card"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="https://play-lh.googleusercontent.com/v4iR_a9IT_72h0SufE6ecUKTuCmViFhGRpoF66pY_pUoWLV7nsWfudLpqd0HPyFxbjkie3lvUrBnXZBPsUsaPw=w240-h480-rw"
+              alt="Film Öneri"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">Film Öneri</h3>
+            <p class="app-desc">
+              Film seçmek dert olmasın! En iyi önerileri hemen keşfet!
+            </p>
+          </div>
+        </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.meftuntech.ingilizceogren"
+          target="_blank"
+          class="app-card"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="https://play-lh.googleusercontent.com/gs3KmiAsLMSlphDUNuGS1kgex5G1pshhRKhzk56YuqllVHtUgzs6sMKJYZZ12fqOGQQ=w240-h480-rw"
+              alt="İnternetsiz İngilizce Öğren"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">İnternetsiz İngilizce Öğren</h3>
+            <p class="app-desc">
+              En çok kullanılan 3700'den fazla kavramı öğretme uygulamasıdır.
+            </p>
+          </div>
+        </a>
+        <a href="#" class="app-card">
+          <div class="app-icon-wrapper">
+            <img
+              src="https://lh3.googleusercontent.com/92DaqcxBbzIPSdRfIB8BGP6im8rx_GP0k_ee0aMa5fC8IOA94FuYUqeIJe0yaZPOPQ0"
+              alt="Yazı Tura"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">Yazı Tura</h3>
+            <p class="app-desc">
+              Parayı havaya atın, yazı mı tura mı gelecek görün.
+            </p>
+          </div>
+        </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.meftuntech.counter"
+          target="_blank"
+          class="app-card"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="https://play-lh.googleusercontent.com/UAvyuQArF7T5Qx_O8gpiSt5EkwoVdf8Cwj6dyskTIWy0ABOU5uL4fFBg_QH-XmEQdhbE=w240-h480-rw"
+              alt="Sayaç: Tesbih Zikirmatik"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">Sayaç: Tesbih Zikirmatik</h3>
+            <p class="app-desc">
+              Basit, kullanışlı ve takibi kolay sayaç uygulamasıdır.
+            </p>
+          </div>
+        </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.meftuntech.basketboloyunu"
+          target="_blank"
+          class="app-card"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="https://play-lh.googleusercontent.com/lwucdYmzDk76XpYXm129eWSOa7LtYyX1grRaldFTnPSR7VgcAVfUEcBmhI9HuNvQXXEBTWVYzM2Pa3R5f0olHMk=w240-h480-rw"
+              alt="Basketbol Oyunu"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">Basketbol Oyunu</h3>
+            <p class="app-desc">
+              Basit ama bağımlılık yapan eğlenceli basketbol oyunu, hemen oyna!
+            </p>
+          </div>
+        </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.meftuntech.namazvakti"
+          target="_blank"
+          class="app-card"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="https://play-lh.googleusercontent.com/Y4K9n_LM749tn4sDOS4J0yiVfcrLhxfJu5J3UtMSc8Jk543zxkxzNMDkV4tw6E6s304=w240-h480-rw"
+              alt="İnternetsiz Namaz Vakti"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">İnternetsiz Namaz Vakti</h3>
+            <p class="app-desc">
+              Namaz vakitlerini internet bağlantısına ihtiyaç duymadan kolayca
+              öğrenin!
+            </p>
+          </div>
+        </a>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.meftuntech.esmaulhusna"
+          target="_blank"
+          class="app-card"
+        >
+          <div class="app-icon-wrapper">
+            <img
+              src="https://lh3.googleusercontent.com/t2eylfZ5PX2AbN_nhkbzrzpkoxXIo3IIgItTVIO7nK2VyJGA7T5PKgKN7UUWFbbfHks9UeeDmH1Sg8nGyE1kQA"
+              alt="Esma-ül Hüsna"
+              class="app-icon"
+              loading="lazy"
+            />
+          </div>
+          <div class="app-info">
+            <h3 class="app-title">Esma-ül Hüsna</h3>
+            <p class="app-desc">Her güne bir Esmaül Hüsna!</p>
+          </div>
+        </a>
+      </div>
+    </main>
+
+    <footer>
+      <div class="social-links">
+        <a
+          href="mailto:meftuntech@gmail.com"
+          class="social-icon"
+          title="E-posta Gönder"
+          target="_blank"
+        >
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a
+          href="https://github.com/meftuntech"
+          class="social-icon"
+          title="GitHub Profilimiz"
+          target="_blank"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+        <a
+          href="https://x.com/meftuntech"
+          class="social-icon"
+          title="X (Twitter) Profilimiz"
+          target="_blank"
+        >
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+      </div>
+      <p class="copyright">© 2026 MeftunTech. Tüm hakları saklıdır.</p>
+    </footer>
+
+    <script>
+      // Add subtle entrance animation to cards
+      document.addEventListener("DOMContentLoaded", () => {
+        const cards = document.querySelectorAll(".app-card");
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.1 },
+        );
+
+        cards.forEach((card, index) => {
+          card.style.opacity = "0";
+          card.style.transform = "translateY(30px)";
+          card.style.transitionDelay = `${(index % 10) * 0.05}s`;
+          observer.observe(card);
+        });
+      });
+    </script>
+  </body>
+</html>
